@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>coremode integrations</title>
+    <meta
+      name="description"
+      content="The tools coremode connects to, what it reads from each, what it can do in them, and when it asks a person first."
+    />
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="index.html" aria-label="coremode home">
+        <img src="assets/mark.svg" alt="" width="36" height="36" />
+        <span class="wordmark">coremode</span>
+      </a>
+      <nav class="top__nav" aria-label="Site">
+        <a href="how.html">How it works</a>
+        <a href="integrations.html" aria-current="page">Integrations</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="index.html#privacy">Privacy</a>
+        <a class="button button--quiet" href="#demo">Request a demo</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-head">
+        <h1>Integrations</h1>
+        <p class="lede">
+          This is where self-driving happens. The engine reads from the tools
+          your company already uses, and when something needs doing, it does
+          it in those same tools.
+        </p>
+      </section>
+
+      <section class="engine">
+        <div class="engine__head">
+          <img src="assets/mark.svg" alt="" width="56" height="56" />
+          <div>
+            <p class="engine__name">Who is driving</p>
+            <h2>You decide how much it does by itself</h2>
+          </div>
+        </div>
+        <p class="lede">
+          Reading is automatic. Acting is not: every action falls into one of
+          three groups, and you choose which actions go where.
+        </p>
+
+        <div class="modes">
+          <article class="mode">
+            <h3>It prepares, you approve</h3>
+            <p class="pillar__role">How everything starts</p>
+            <p>
+              The engine drafts the email, fills in the issue, or lines up the
+              message, and puts it in your Focus. Nothing leaves until you
+              press the button.
+            </p>
+          </article>
+          <article class="mode">
+            <h3>It acts within rules you set</h3>
+            <p class="pillar__role">When you trust a kind of action</p>
+            <p>
+              For actions you have seen it get right, you can let it go ahead:
+              create the issue, post the routine update. You hear about it as
+              a signal afterward, and can turn the rule off at any time.
+            </p>
+          </article>
+          <article class="mode">
+            <h3>It always asks</h3>
+            <p class="pillar__role">Whatever the rules say</p>
+            <p>
+              Anything that reaches people outside your company, changes who
+              has access to something, or cannot be undone waits for a person,
+              every time.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="how how--first">
+        <h2>What keeps an action safe</h2>
+        <dl class="promises">
+          <div>
+            <dt>Only actions on a fixed list</dt>
+            <dd>
+              The engine can do what is in its catalog of actions and nothing
+              else. An AI model never invents a new kind of action.
+            </dd>
+          </div>
+          <div>
+            <dt>Never more than you could do yourself</dt>
+            <dd>
+              An action runs with the permissions of the person who approved
+              it or whose rule allowed it. Ordinary code checks that, not a
+              model.
+            </dd>
+          </div>
+          <div>
+            <dt>Checked afterward</dt>
+            <dd>
+              After acting, the engine confirms the result in the other tool
+              and updates what it knows. If it did not work, you are told.
+            </dd>
+          </div>
+          <div>
+            <dt>On the record</dt>
+            <dd>
+              Every action is recorded: what was done, in which tool, on whose
+              approval or under which rule.
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="how">
+        <h2>The tools</h2>
+        <p class="lede">
+          coremode is in early development, so this list says plainly where
+          each connection stands.
+        </p>
+        <div class="tools">
+          <article class="tool">
+            <div class="tool__head">
+              <h3>Google Workspace</h3>
+              <span class="status status--now">Building now</span>
+            </div>
+            <dl>
+              <dt>Reads</dt><dd>Your directory of people and who reports to whom; email, calendar, and documents.</dd>
+              <dt>Does</dt><dd>Sends an email you approved; shares a document.</dd>
+            </dl>
+          </article>
+          <article class="tool">
+            <div class="tool__head">
+              <h3>Slack</h3>
+              <span class="status status--now">Building now</span>
+            </div>
+            <dl>
+              <dt>Reads</dt><dd>Workspace members, channels, and messages.</dd>
+              <dt>Does</dt><dd>Posts a message; creates a channel.</dd>
+            </dl>
+          </article>
+          <article class="tool">
+            <div class="tool__head">
+              <h3>Linear</h3>
+              <span class="status status--next">Next</span>
+            </div>
+            <dl>
+              <dt>Reads</dt><dd>Teams, projects, issues, and their status.</dd>
+              <dt>Does</dt><dd>Creates a team or an issue.</dd>
+            </dl>
+          </article>
+          <article class="tool">
+            <div class="tool__head">
+              <h3>Okta</h3>
+              <span class="status status--next">Next</span>
+            </div>
+            <dl>
+              <dt>Reads</dt><dd>Sign-in for your people, accounts, and groups.</dd>
+              <dt>Does</dt><dd>Removes access to coremode the moment someone leaves.</dd>
+            </dl>
+          </article>
+          <article class="tool">
+            <div class="tool__head">
+              <h3>Workday</h3>
+              <span class="status status--next">Next</span>
+            </div>
+            <dl>
+              <dt>Reads</dt><dd>Employees, departments, and reporting lines, as the authority on your structure.</dd>
+              
+            </dl>
+          </article>
+          <article class="tool">
+            <div class="tool__head">
+              <h3>Microsoft 365 and Teams</h3>
+              <span class="status status--later">Later</span>
+            </div>
+            <dl>
+              <dt>Reads</dt><dd>Directory, email, calendar, documents, and chat.</dd>
+              <dt>Does</dt><dd>Sends email and messages.</dd>
+            </dl>
+          </article>
+          <article class="tool">
+            <div class="tool__head">
+              <h3>Jira and Confluence</h3>
+              <span class="status status--later">Later</span>
+            </div>
+            <dl>
+              <dt>Reads</dt><dd>Issues, projects, and pages.</dd>
+              <dt>Does</dt><dd>Creates issues.</dd>
+            </dl>
+          </article>
+          <article class="tool">
+            <div class="tool__head">
+              <h3>GitHub</h3>
+              <span class="status status--later">Later</span>
+            </div>
+            <dl>
+              <dt>Reads</dt><dd>Repositories, pull requests, and reviews.</dd>
+              <dt>Does</dt><dd>Opens issues.</dd>
+            </dl>
+          </article>
+          <article class="tool">
+            <div class="tool__head">
+              <h3>Salesforce</h3>
+              <span class="status status--later">Later</span>
+            </div>
+            <dl>
+              <dt>Reads</dt><dd>Accounts, opportunities, and their stages.</dd>
+              <dt>Does</dt><dd>Updates a record.</dd>
+            </dl>
+          </article>
+        </div>
+        <p class="fine">
+          Need one that is not here? Tell us when you request a demo. It shapes
+          what we build next.
+        </p>
+      </section>
+
+      <section class="demo" id="demo">
+        <h2>See it with your own company's work</h2>
+        <p class="lede">
+          A demo takes half an hour. We show you Focus, Signals, and
+          Perspective, and talk through what connecting your tools would
+          involve. We are working with a small number of companies of 30 to
+          150 people while the product is in early development.
+        </p>
+        <a class="button" href="mailto:hello@coremodehq.com?subject=Demo%20request">
+          Request a demo
+        </a>
+        <p class="fine">Opens an email to hello@coremodehq.com.</p>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="brand">
+        <img src="assets/mark.svg" alt="" width="28" height="28" />
+        <span class="wordmark">coremode</span>
+      </div>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="how.html">How it works</a>
+        <a href="integrations.html">Integrations</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="index.html#privacy">Privacy</a>
+      </nav>
+      <p>This site sets no cookies and loads nothing from anyone else.</p>
+    </footer>
+  </body>
+</html>
