@@ -1037,3 +1037,16 @@ h3 {
     gap: 18px;
   }
 }
+
+/* ---- headline: the second line is set in the serif, as a signature ---- */
+
+.for {
+  display: block;
+  margin-top: 0.06em;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.94em;
+  letter-spacing: -0.015em;
+  color: var(--violet-text);
+}
