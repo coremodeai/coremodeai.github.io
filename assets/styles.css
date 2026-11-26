@@ -1445,3 +1445,143 @@ button.button:focus-visible {
     font-size: 0.7em;
   }
 }
+
+/* ================================================================
+ * Figure and ground, matching the product
+ * A near-black ground under indigo surfaces in two clear steps, each with a
+ * visible edge and a top highlight. On a surface: titles 15:1, body 12:1,
+ * small text 7:1.
+ * ================================================================ */
+
+:root {
+  --page: #05060f;
+  --surface: linear-gradient(180deg, #23275a 0%, #191c44 100%);
+  --surface-2: linear-gradient(180deg, #2f3478 0%, #23275c 100%);
+  --glass: var(--surface);
+  --edge: rgba(150, 160, 255, 0.42);
+  --line: rgba(160, 170, 255, 0.24);
+  --ink: #ffffff;
+  --ink-2: #e6e8f5;
+  --ink-3: #b9bdd6;
+  --violet-text: #d6cfff;
+  --mint: #8cf0bd;
+  --rose: #ff9fae;
+}
+
+.item,
+.plan,
+.tool,
+.mode,
+.pillars li,
+.reading,
+.viz__option {
+  background: var(--surface);
+  border-color: var(--edge);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 16px 38px rgba(0, 0, 0, 0.55);
+}
+
+/* The product screen and the engine panel are one step darker than the
+   cards inside them, so the cards read as raised. */
+.screen {
+  background: #0c0e24;
+  border-color: rgba(150, 160, 255, 0.5);
+}
+
+.engine {
+  background:
+    radial-gradient(70% 90% at 12% 0%, rgba(124, 105, 243, 0.38), transparent 70%),
+    radial-gradient(50% 70% at 95% 100%, rgba(76, 125, 240, 0.22), transparent 70%),
+    #0c0e24;
+}
+
+.item--late {
+  border-color: rgba(255, 159, 174, 0.75);
+}
+
+.plan--main {
+  background: var(--surface-2);
+  border-color: var(--accent);
+}
+
+.reading {
+  background:
+    linear-gradient(120deg, rgba(150, 134, 255, 0.3), transparent 70%), var(--surface);
+  border-color: rgba(170, 156, 255, 0.7);
+}
+
+.chip {
+  background: #2a2e68;
+  border-color: rgba(170, 180, 255, 0.6);
+}
+
+.chip--primary {
+  background: linear-gradient(180deg, var(--accent-bright), var(--accent-deep));
+  border-color: transparent;
+}
+
+.button--quiet {
+  background: #2a2e68;
+  border-color: rgba(170, 180, 255, 0.6);
+}
+
+.button--quiet:hover {
+  background: #363b82;
+  border-color: var(--accent);
+}
+
+.pillar__icon {
+  background: var(--surface-2);
+  border-color: rgba(170, 180, 255, 0.6);
+  color: #fff;
+}
+
+.status {
+  background: #2a2e68;
+  color: var(--ink-2);
+}
+
+.status--now {
+  background: rgba(140, 240, 189, 0.2);
+  color: var(--mint);
+}
+
+.status--next {
+  background: rgba(150, 134, 255, 0.32);
+  color: var(--violet-text);
+}
+
+.address {
+  background:
+    radial-gradient(60% 120% at 10% 0%, rgba(124, 105, 243, 0.3), transparent 70%),
+    #0c0e24;
+  border-color: rgba(170, 180, 255, 0.6);
+}
+
+.field input {
+  background: #0d0f26;
+  border-color: rgba(170, 180, 255, 0.5);
+}
+
+.top,
+.foot,
+.how,
+.privacy,
+.fit,
+.summary,
+.demo {
+  border-color: var(--line);
+}
+
+.soon {
+  border-top-color: var(--line);
+}
+
+.statement {
+  color: var(--ink-2);
+}
+
+.statement--answer {
+  color: #fff;
+}
