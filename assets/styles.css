@@ -1323,3 +1323,92 @@ button.button:focus-visible {
 .address input {
   caret-color: var(--accent);
 }
+
+/* ================================================================
+ * Contrast pass
+ * Brighter text on a darker page, and surfaces that separate clearly.
+ * On the page background: titles 19:1, body 15:1, small text 9:1.
+ * ================================================================ */
+
+:root {
+  --page: #06071a;
+  --ink: #ffffff;
+  --ink-2: #e4e6f3;
+  --ink-3: #b7bbd2;
+  --edge: rgba(190, 198, 255, 0.34);
+  --line: rgba(180, 190, 255, 0.22);
+  --glass: linear-gradient(180deg, rgba(170, 180, 255, 0.17), rgba(170, 180, 255, 0.08));
+  --violet-text: #d4ccff;
+}
+
+.item,
+.plan,
+.tool,
+.mode,
+.pillars li {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.screen {
+  background: rgba(16, 18, 44, 0.96);
+}
+
+.engine {
+  background:
+    radial-gradient(70% 90% at 12% 0%, rgba(124, 105, 243, 0.42), transparent 70%),
+    radial-gradient(50% 70% at 95% 100%, rgba(76, 125, 240, 0.26), transparent 70%),
+    rgba(14, 16, 40, 0.96);
+  border-color: rgba(170, 156, 255, 0.75);
+}
+
+.plan--main {
+  border-color: var(--accent);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 0 0 1px rgba(255, 201, 74, 0.35),
+    0 24px 70px rgba(111, 91, 239, 0.4);
+}
+
+.plan__price {
+  color: var(--ink-2);
+}
+
+.top__nav a:not(.button) {
+  color: var(--ink-2);
+}
+
+.button--quiet {
+  border-color: rgba(200, 206, 255, 0.5);
+}
+
+.field input,
+.address {
+  border-color: rgba(190, 198, 255, 0.5);
+}
+
+/* ---- the mark, larger and lit ---- */
+
+.brand img {
+  width: 40px;
+  height: 40px;
+  border-radius: 27%;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 6px 26px rgba(124, 105, 243, 0.8);
+}
+
+.foot .brand img {
+  width: 30px;
+  height: 30px;
+}
+
+.engine__head img {
+  box-shadow: 0 0 46px rgba(124, 105, 243, 0.95);
+}
+
+.wordmark {
+  font-size: 25px;
+  font-weight: 760;
+}

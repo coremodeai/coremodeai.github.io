@@ -31,11 +31,12 @@
       <section class="claim">
         <h1>Choose your company's address</h1>
         <p class="lede">
-          This is where your people will find coremode. Pick it now and it is
-          held for you.
+          This is where your people will find coremode. Pick it, then sign in
+          with your work Google account to set your company up.
         </p>
 
-        <form class="claim__form" method="post" action="https://api-prod-805397706072.us-central1.run.app/v1/signup-requests">
+        <!-- An ordinary form: the browser goes to sign-in carrying the address. -->
+        <form class="claim__form" method="get" action="https://api-prod-805397706072.us-central1.run.app/api/v1/auth/google/start">
           <label class="address" for="slug">
             <input
               id="slug"
@@ -50,6 +51,7 @@
               autocomplete="off"
               autocapitalize="none"
               spellcheck="false"
+              autofocus
               aria-describedby="slug-help"
             />
             <span class="address__domain">.coremode.ai</span>
@@ -58,29 +60,18 @@
             Letters, numbers, and hyphens. At least 3 characters.
           </p>
 
-          <div class="claim__fields">
-            <label class="field">
-              <span>Company name</span>
-              <input name="company" type="text" required maxlength="100" autocomplete="organization" />
-            </label>
-            <label class="field">
-              <span>Your work email</span>
-              <input name="email" type="email" required maxlength="254" autocomplete="email" />
-            </label>
-          </div>
-
-          <!-- Left empty by people; filled in by automated form-fillers. -->
-          <div class="trap" aria-hidden="true">
-            <label>Website <input name="website" type="text" tabindex="-1" autocomplete="off" /></label>
-          </div>
-
-          <button class="button" type="submit">Reserve this address</button>
+          <button class="button" type="submit">Continue with Google</button>
           <p class="fine">
-            coremode is in early development, so this reserves your address
-            and does not create an account yet. We will write to you to set
-            your company up. We use your email only for that.
+            Your company's name and your email come from your Google account,
+            so there is nothing else to fill in. coremode is opening to
+            companies a few at a time: if yours is not open yet, we hold this
+            address for you and write to you when it is.
           </p>
         </form>
+
+        <p class="fine">
+          Already set up? <a class="link" href="https://api-prod-805397706072.us-central1.run.app/">Sign in</a>
+        </p>
       </section>
     </main>
 
