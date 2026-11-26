@@ -764,3 +764,39 @@ h3 {
     padding-left: 54px;
   }
 }
+
+/* ---- the headline's blank: a field waiting for the reader's company ---- */
+
+.slot {
+  display: inline-block;
+  margin-top: 0.14em;
+  padding: 0.04em 0.3em 0.1em;
+  border-radius: 0.24em;
+  border: 2px solid rgba(149, 133, 248, 0.6);
+  background: rgba(140, 124, 247, 0.16);
+  color: var(--violet-text);
+  white-space: nowrap;
+}
+
+.slot::after {
+  content: "";
+  display: inline-block;
+  width: 0.06em;
+  height: 0.82em;
+  margin-left: 0.1em;
+  vertical-align: -0.06em;
+  background: var(--violet-text);
+  animation: caret 1.1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slot::after {
+    animation: none;
+  }
+}
