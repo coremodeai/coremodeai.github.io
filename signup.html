@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>Sign up for coremode</title>
+    <meta
+      name="description"
+      content="Choose your company's coremode address and reserve it."
+    />
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="index.html" aria-label="coremode home">
+        <img src="assets/mark.svg" alt="" width="36" height="36" />
+        <span class="wordmark">coremode</span>
+      </a>
+      <nav class="top__nav" aria-label="Site">
+        <a href="how.html">How it works</a>
+        <a href="integrations.html">Integrations</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="index.html#privacy">Privacy</a>
+        <a class="button button--quiet" href="signup.html">Sign up</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="claim">
+        <h1>Choose your company's address</h1>
+        <p class="lede">
+          This is where your people will find coremode. Pick it now and it is
+          held for you.
+        </p>
+
+        <form class="claim__form" method="post" action="https://api-prod-805397706072.us-central1.run.app/v1/signup-requests">
+          <label class="address" for="slug">
+            <input
+              id="slug"
+              name="slug"
+              type="text"
+              required
+              minlength="3"
+              maxlength="40"
+              pattern="[A-Za-z0-9](?:[A-Za-z0-9]|-(?!-))*[A-Za-z0-9]"
+              title="Letters, numbers, and single hyphens. At least 3 characters."
+              placeholder="your-company"
+              autocomplete="off"
+              autocapitalize="none"
+              spellcheck="false"
+              aria-describedby="slug-help"
+            />
+            <span class="address__domain">.coremode.ai</span>
+          </label>
+          <p class="fine" id="slug-help">
+            Letters, numbers, and hyphens. At least 3 characters.
+          </p>
+
+          <div class="claim__fields">
+            <label class="field">
+              <span>Company name</span>
+              <input name="company" type="text" required maxlength="100" autocomplete="organization" />
+            </label>
+            <label class="field">
+              <span>Your work email</span>
+              <input name="email" type="email" required maxlength="254" autocomplete="email" />
+            </label>
+          </div>
+
+          <!-- Left empty by people; filled in by automated form-fillers. -->
+          <div class="trap" aria-hidden="true">
+            <label>Website <input name="website" type="text" tabindex="-1" autocomplete="off" /></label>
+          </div>
+
+          <button class="button" type="submit">Reserve this address</button>
+          <p class="fine">
+            coremode is in early development, so this reserves your address
+            and does not create an account yet. We will write to you to set
+            your company up. We use your email only for that.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="brand">
+        <img src="assets/mark.svg" alt="" width="28" height="28" />
+        <span class="wordmark">coremode</span>
+      </div>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="how.html">How it works</a>
+        <a href="integrations.html">Integrations</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="index.html#privacy">Privacy</a>
+      </nav>
+      <p>This site sets no cookies and loads nothing from anyone else.</p>
+    </footer>
+  </body>
+</html>
