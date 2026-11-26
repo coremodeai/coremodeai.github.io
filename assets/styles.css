@@ -1819,3 +1819,41 @@ button.button:focus-visible {
 .claim__form .button {
   margin-top: 18px;
 }
+
+/* ---- create or join ---- */
+
+.ways--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding-block: 24px 48px;
+}
+
+.way--choice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+}
+
+.way--choice:hover {
+  background: var(--surface);
+  border-color: var(--edge);
+}
+
+.way--choice h2 {
+  font-size: 28px;
+  font-weight: 720;
+  letter-spacing: -0.025em;
+}
+
+.way--choice p {
+  flex: 1;
+  margin: 12px 0 26px;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+@media (max-width: 880px) {
+  .ways--two {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

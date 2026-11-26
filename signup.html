@@ -28,57 +28,40 @@
     </header>
 
     <main>
-      <section class="claim">
-        <h1>Choose your company's address</h1>
+      <section class="page-head">
+        <h1>Get started</h1>
         <p class="lede">
-          This is where your people will find coremode. Pick it, then sign in
-          with your work Google account to set your company up.
+          Your company is recognised by your work email's domain. Create it
+          if you're the first one here, or join it if someone already has.
         </p>
+      </section>
 
-        <!-- An ordinary form: the browser goes to sign-in carrying the address. -->
-        <form class="claim__form" method="get" action="https://api-prod-805397706072.us-central1.run.app/api/v1/auth/google/start">
-          <label class="address" for="slug">
-            <input
-              id="slug"
-              name="slug"
-              type="text"
-              required
-              minlength="3"
-              maxlength="40"
-              pattern="[A-Za-z0-9](?:[A-Za-z0-9]|-(?!-))*[A-Za-z0-9]"
-              title="Letters, numbers, and single hyphens. At least 3 characters."
-              placeholder="your-company"
-              autocomplete="off"
-              autocapitalize="none"
-              spellcheck="false"
-              autofocus
-              aria-describedby="slug-help"
-            />
-            <span class="address__domain">.coremode.ai</span>
-          </label>
-          <p class="fine" id="slug-help">
-            Letters, numbers, and hyphens. At least 3 characters.
-          </p>
-
-          <button class="button" type="submit">Continue with Google</button>
-          <p class="fine">
-            Your company's name and your email come from your Google account,
-            so there is nothing else to fill in. If your company already has an
-            address, you'll simply join it; this one is ignored. coremode is opening to
-            companies a few at a time: if yours is not open yet, we hold this
-            address for you and write to you when it is.
-          </p>
-        </form>
-
-<div class="join">
-          <h2>Is your company already on coremode?</h2>
+      <section class="ways ways--two" aria-label="Create or join">
+        <div class="way way--choice">
+          <h2>Create your company</h2>
           <p>
-            Then you don't need an address. Sign in with your work Google
-            account and you'll join your company. An administrator there
-            gives you a seat.
+            Choose your company's address, such as acme.coremode.ai, and see
+            straight away whether it's free. Then sign in with your work
+            Google account to claim it. You become its administrator.
+          </p>
+          <a class="button" href="https://api-prod-805397706072.us-central1.run.app/create">Create your company</a>
+        </div>
+        <div class="way way--choice">
+          <h2>Join your company</h2>
+          <p>
+            If your company is already on coremode, sign in with your work
+            Google account and you'll join it. An administrator there gives
+            you a seat.
           </p>
           <a class="button button--quiet" href="https://api-prod-805397706072.us-central1.run.app/">Sign in</a>
         </div>
+      </section>
+
+      <section class="how">
+        <p class="fine">
+          coremode is opening to companies a few at a time. If yours is not
+          open yet, we hold the address you chose and write to you when it is.
+        </p>
       </section>
     </main>
 
