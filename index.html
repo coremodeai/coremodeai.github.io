@@ -14,14 +14,15 @@
   </head>
   <body>
     <header class="top">
-      <a class="brand" href="/" aria-label="coremode home">
+      <a class="brand" href="index.html" aria-label="coremode home">
         <img src="assets/mark.svg" alt="" width="36" height="36" />
         <span class="wordmark">coremode</span>
       </a>
-      <nav class="top__nav" aria-label="Sections">
-        <a href="#how">How it works</a>
-        <a href="#privacy">Privacy</a>
-        <a class="button button--quiet" href="#partners">Work with us</a>
+      <nav class="top__nav" aria-label="Site">
+        <a href="how.html">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="index.html#privacy">Privacy</a>
+        <a class="button button--quiet" href="#demo">Request a demo</a>
       </nav>
     </header>
 
@@ -58,8 +59,8 @@
             evidence attached.
           </p>
           <div class="hero__actions">
-            <a class="button" href="#partners">Become a design partner</a>
-            <a class="link" href="#how">See how it works</a>
+            <a class="button" href="#demo">Request a demo</a>
+            <a class="link" href="how.html">See how it works</a>
           </div>
           <p class="fine">In early development with a small group of companies.</p>
         </div>
@@ -116,87 +117,32 @@
         </p>
       </section>
 
-      <section class="how" id="how">
+      <section class="summary">
         <h2>Two screens you look at, and one you read</h2>
-
-        <div class="view">
-          <div class="view__text">
-            <h3>Focus</h3>
-            <p>
-              The handful of things that need you: a decision only you can
-              make, something prepared and waiting for your go-ahead, two teams
-              expecting different things. Never more than a few at once, late
-              ones first.
-            </p>
-            <p>
-              Each one says what is being asked and what depends on it, links
-              to the messages and documents it came from, and has a button that
-              finishes it.
-            </p>
+        <dl class="trio">
+          <div>
+            <dt>Focus</dt>
+            <dd>
+              The handful of things that need you today. Never more than a few
+              at once, each with a button that finishes it.
+            </dd>
           </div>
-          <div class="view__show">
-            <article class="item">
-              <div class="item__meta">
-                <span class="kind kind--alignment">Alignment</span>
-                <span class="due">Needed today</span>
-              </div>
-              <h3>Sales and Engineering expect different start dates</h3>
-              <p>
-                Sales told the customer January 13. Engineering is planning for
-                January 20. One of the two has to move.
-              </p>
-              <div class="item__buttons">
-                <span class="chip chip--primary">Align on January 13</span>
-                <span class="chip chip--primary">Align on January 20</span>
-              </div>
-            </article>
+          <div>
+            <dt>Signals</dt>
+            <dd>
+              Things worth knowing that ask nothing of you. Acknowledge them or
+              let them clear themselves.
+            </dd>
           </div>
-        </div>
-
-        <div class="view">
-          <div class="view__text">
-            <h3>Signals</h3>
-            <p>
-              Things worth knowing that ask nothing of you: something finished,
-              something changed, a pattern nobody said out loud. Acknowledge
-              them or ignore them. They clear themselves after a few days.
-            </p>
+          <div>
+            <dt>Perspective</dt>
+            <dd>
+              A few paragraphs on where the company is heading and where you
+              stand in it, revised when something material changes.
+            </dd>
           </div>
-          <div class="view__show">
-            <div class="rows">
-              <div class="row">
-                <span class="kind kind--milestone">Milestone</span>
-                <h3>The billing migration is complete</h3>
-                <p>This closes the largest piece of the quarter's reliability goal.</p>
-              </div>
-              <div class="row">
-                <span class="kind kind--insight">Insight</span>
-                <h3>Prospects ask about privacy before price</h3>
-                <p>Six of the last eight discovery calls raised it first.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="view">
-          <div class="view__text">
-            <h3>Perspective</h3>
-            <p>
-              A few paragraphs, revised when something material changes, on
-              where the company is heading and where you stand in it. It opens
-              with what changed since you last read it.
-            </p>
-          </div>
-          <div class="view__show">
-            <blockquote class="reading">
-              <p>
-                The company is moving from proving the idea to proving that
-                people will pay for it. You own all three goals for the
-                quarter, and Engineering is waiting on you for the pilot scope.
-              </p>
-            </blockquote>
-          </div>
-        </div>
+        </dl>
+        <a class="link" href="how.html">How it works, in detail</a>
       </section>
 
       <section class="privacy" id="privacy">
@@ -252,17 +198,18 @@
         </p>
       </section>
 
-      <section class="partners" id="partners">
-        <h2>We are looking for a few design partners</h2>
+      <section class="demo" id="demo">
+        <h2>See it with your own company's work</h2>
         <p class="lede">
-          If you run a company of 30 to 150 people and coordination has started
-          to cost you, we would like to build this with you. You get the
-          product early and a direct line to the people making it. We get to
-          find out what is useful in a real company.
+          A demo takes half an hour. We show you Focus, Signals, and
+          Perspective, and talk through what connecting your tools would
+          involve. We are working with a small number of companies of 30 to
+          150 people while the product is in early development.
         </p>
-        <a class="button" href="mailto:hello@coremodehq.com?subject=Design%20partner">
-          Write to hello@coremodehq.com
+        <a class="button" href="mailto:hello@coremodehq.com?subject=Demo%20request">
+          Request a demo
         </a>
+        <p class="fine">Opens an email to hello@coremodehq.com.</p>
       </section>
     </main>
 
@@ -271,6 +218,11 @@
         <img src="assets/mark.svg" alt="" width="28" height="28" />
         <span class="wordmark">coremode</span>
       </div>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="how.html">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="index.html#privacy">Privacy</a>
+      </nav>
       <p>This site sets no cookies and loads nothing from anyone else.</p>
     </footer>
   </body>

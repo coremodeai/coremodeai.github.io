@@ -554,3 +554,213 @@ h3 {
     align-items: flex-start;
   }
 }
+
+/* ---- navigation across pages ---- */
+
+.top__nav a[aria-current="page"] {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--violet);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+
+.foot__nav {
+  display: flex;
+  gap: 22px;
+  font-weight: 600;
+}
+
+.foot__nav a {
+  color: var(--ink-2);
+  text-decoration: none;
+}
+
+.foot__nav a:hover {
+  color: var(--ink);
+}
+
+/* ---- inner pages ---- */
+
+.page-head {
+  padding-block: 56px 64px;
+}
+
+.how--first {
+  border-top: 1px solid var(--line);
+}
+
+.summary,
+.demo {
+  padding-block: 88px;
+  border-top: 1px solid var(--line);
+}
+
+.trio {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 36px;
+  margin-block: 44px 34px;
+}
+
+.trio dt {
+  font-size: 24px;
+  font-weight: 690;
+  letter-spacing: -0.02em;
+}
+
+.trio dd {
+  margin-top: 8px;
+  color: var(--ink-2);
+}
+
+.demo .button {
+  margin-top: 30px;
+}
+
+/* A real sequence, so it is numbered. */
+.steps {
+  list-style: none;
+  counter-reset: step;
+  display: grid;
+  gap: 30px;
+  max-width: 760px;
+  margin-top: 48px;
+}
+
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 62px;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(149, 133, 248, 0.5);
+  background: rgba(140, 124, 247, 0.18);
+  color: var(--violet-text);
+  font-weight: 700;
+}
+
+.steps h3 {
+  font-size: 21px;
+  letter-spacing: -0.018em;
+}
+
+.steps p {
+  margin-top: 6px;
+  color: var(--ink-2);
+}
+
+/* ---- pricing ---- */
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+  padding-bottom: 96px;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border-radius: 22px;
+  background: var(--glass);
+  border: 1px solid var(--edge);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.plan--main {
+  border-color: rgba(149, 133, 248, 0.6);
+  background:
+    linear-gradient(165deg, rgba(143, 127, 247, 0.2), transparent 55%), var(--glass);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 70px rgba(111, 91, 239, 0.2);
+}
+
+.plan h2 {
+  font-size: 26px;
+}
+
+.plan__for {
+  min-height: 4.6em;
+  margin-top: 8px;
+  font-size: 16px;
+  color: var(--ink-2);
+}
+
+.plan__price {
+  margin-top: 18px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-3);
+}
+
+.plan__price span {
+  display: block;
+  font-size: 44px;
+  font-weight: 720;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+}
+
+.plan ul {
+  list-style: none;
+  display: grid;
+  gap: 11px;
+  margin-top: 20px;
+  font-size: 16px;
+  color: var(--ink-2);
+}
+
+.plan li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.plan li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--violet);
+}
+
+@media (max-width: 880px) {
+  .page-head {
+    padding-block: 32px 44px;
+  }
+
+  .summary,
+  .demo {
+    padding-block: 60px;
+  }
+
+  .trio,
+  .plans {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .plan__for {
+    min-height: 0;
+  }
+
+  .steps li {
+    padding-left: 54px;
+  }
+}
