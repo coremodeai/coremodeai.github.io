@@ -3,7 +3,8 @@
 The marketing site for coremode, served at **coremode.ai** by GitHub Pages.
 
 Plain HTML and CSS. No build step, no JavaScript, and no requests to any
-third party: no analytics, fonts, or trackers.
+third party: no analytics, hosted fonts, or trackers. The one web font, Mr
+Dafoe (SIL Open Font License, in `assets/fonts`), is served from this site.
 
 - Preview locally: `./preview.sh` then open http://localhost:8000/
 - The product itself lives in the private `coremodeai/coremode` repository.
