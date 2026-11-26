@@ -1857,3 +1857,21 @@ button.button:focus-visible {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* ---- each plan ends with what to do about it ---- */
+
+.plan {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan ul {
+  flex: 1;
+}
+
+.plan__cta {
+  align-self: stretch;
+  justify-content: center;
+  margin-top: 28px;
+  text-align: center;
+}
