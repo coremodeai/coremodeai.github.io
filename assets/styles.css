@@ -1412,3 +1412,36 @@ button.button:focus-visible {
   font-size: 25px;
   font-weight: 760;
 }
+
+/* ---- headline: two lines, with the script signed onto the second ---- */
+
+.hero h1 .line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero h1 {
+  padding-bottom: 0.2em;
+}
+
+.script {
+  display: inline-block;
+  width: auto;
+  max-width: none;
+  margin: 0 0 0 -0.08em;
+  transform: translateY(0.2em) rotate(-5deg);
+  transform-origin: left center;
+  font-size: 0.62em;
+  vertical-align: baseline;
+}
+
+@media (max-width: 880px) {
+  .hero h1 .line {
+    white-space: normal;
+  }
+
+  .script {
+    margin-left: 0;
+    font-size: 0.7em;
+  }
+}
