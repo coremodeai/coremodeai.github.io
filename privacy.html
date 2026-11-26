@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>Privacy in coremode</title>
+    <meta
+      name="description"
+      content="How coremode keeps private things private: what it reads, who can see what, and what no one can see, including your employer and us."
+    />
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="index.html" aria-label="coremode home">
+        <img src="assets/mark.svg" alt="" width="36" height="36" />
+        <span class="wordmark">coremode</span>
+      </a>
+      <nav class="top__nav" aria-label="Site">
+        <a href="how.html">How it works</a>
+        <a href="integrations.html">Integrations</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+        <a class="button button--quiet" href="signup.html">Sign up</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-head">
+        <h1>Built so that it cannot become surveillance</h1>
+        <p class="lede">
+          A system that reads a company's work could easily turn into a way of
+          watching people. We designed against that from the first line of
+          code, as structure and not as a setting someone can change.
+        </p>
+      </section>
+
+      <section class="engine">
+        <div class="engine__head">
+          <img src="assets/mark.svg" alt="" width="56" height="56" />
+          <div>
+            <p class="engine__name">Three kinds of knowledge</p>
+            <h2>Knowledge flows to you, never up from you</h2>
+          </div>
+        </div>
+        <p class="lede">
+          Everything coremode knows belongs to one of three places. What is
+          shared can inform what is yours. What is yours never informs what
+          is shared.
+        </p>
+        <div class="modes">
+          <article class="mode">
+            <h3>Your organization</h3>
+            <p class="pillar__role">Shared with everyone in the company</p>
+            <p>
+              Company goals, who reports to whom, announcements, and work done
+              in shared channels and tools that everyone can already see.
+            </p>
+          </article>
+          <article class="mode">
+            <h3>A private space</h3>
+            <p class="pillar__role">Shared with its members only</p>
+            <p>
+              A leadership group, a hiring loop, a deal. Only its members can
+              see what is in it. To everyone else, it does not exist: no name,
+              no member list, no count.
+            </p>
+          </article>
+          <article class="mode">
+            <h3>You</h3>
+            <p class="pillar__role">Yours alone</p>
+            <p>
+              Your email, your direct messages, your notes, and your personal
+              objectives. They shape what coremode shows you and no one else.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="how how--first" id="promises">
+        <h2>What that means in practice</h2>
+        <dl class="promises">
+          <div>
+            <dt>What is private stays private</dt>
+            <dd>
+              Your email, your direct messages, and your notes inform only what
+              coremode shows you. They never reach your manager, your company's
+              administrators, or anyone else.
+            </dd>
+          </div>
+          <div>
+            <dt>Seniority opens nothing</dt>
+            <dd>
+              A chief executive or an administrator sees a private space only
+              if they are a member of it. Otherwise they cannot tell that it
+              exists.
+            </dd>
+          </div>
+          <div>
+            <dt>The system decides access, not the model</dt>
+            <dd>
+              Who may see what is enforced by ordinary, tested code. An AI
+              model is never asked whether to show something to someone.
+            </dd>
+          </div>
+          <div>
+            <dt>Everything traces to its source</dt>
+            <dd>
+              Each thing coremode tells you links to the messages and documents
+              behind it, in the tools they came from, so you can check it.
+            </dd>
+          </div>
+          <div>
+            <dt>What you conclude stays as private as what you read</dt>
+            <dd>
+              A summary, a count, or a signal built from private material is
+              exactly as private as that material. Turning something into a
+              number does not make it shareable.
+            </dd>
+          </div>
+          <div>
+            <dt>Losing access takes effect at once</dt>
+            <dd>
+              When someone leaves a space or the company, what they could see
+              because of it stops being shown to them straight away, not at
+              the next scheduled update.
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="how">
+        <h2>What your employer can and cannot see</h2>
+        <p class="lede">
+          coremode is there to support the people doing the work. It is not a
+          tool for measuring them.
+        </p>
+        <div class="compare">
+          <article class="mode">
+            <h3>Can see</h3>
+            <ul class="plain">
+              <li>Company goals and the progress toward them</li>
+              <li>Who is in the company and who reports to whom</li>
+              <li>What happens in shared channels and tools, as they already can</li>
+              <li>The private spaces they are themselves a member of</li>
+            </ul>
+          </article>
+          <article class="mode">
+            <h3>Cannot see</h3>
+            <ul class="plain plain--no">
+              <li>Your email, direct messages, or notes</li>
+              <li>What coremode shows you in your Focus or Perspective</li>
+              <li>Private spaces they are not a member of, or that those exist</li>
+              <li>Scores, rankings, or activity counts for individual people; coremode does not produce them</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="how">
+        <h2>What we do with your company's data</h2>
+        <dl class="promises">
+          <div>
+            <dt>It is used to run coremode for you</dt>
+            <dd>
+              Your company's data produces your company's signals. One
+              company's data is never used for another's.
+            </dd>
+          </div>
+          <div>
+            <dt>It does not train shared models</dt>
+            <dd>
+              We do not train models on your data to benefit other customers.
+              If that ever becomes worth offering, it will be something you
+              choose, not something you find out about.
+            </dd>
+          </div>
+          <div>
+            <dt>Our own staff are kept out of the content</dt>
+            <dd>
+              The tools we use to run the service manage accounts, not what is
+              in them.
+            </dd>
+          </div>
+          <div>
+            <dt>The same on every plan</dt>
+            <dd>
+              These protections are not a paid extra. They are the same on
+              Starter, Business, and Enterprise.
+            </dd>
+          </div>
+        </dl>
+        <p class="fine">
+          coremode is in early development. This page describes how the
+          product is designed and built; ask us in a demo what is in place
+          today. Our formal privacy policy will be published before the
+          product is generally available. This website sets no cookies and
+          loads nothing from anyone else.
+        </p>
+      </section>
+
+      <section class="demo" id="demo">
+        <h2>See it with your own company's work</h2>
+        <p class="lede">
+          A demo takes half an hour. We show you Focus, Signals, and
+          Perspective, and talk through what connecting your tools would
+          involve. We are working with a small number of companies of 30 to
+          150 people while the product is in early development.
+        </p>
+        <a class="button" href="mailto:support@coremodehq.com?subject=Demo%20request">
+          Request a demo
+        </a>
+        <p class="fine">Opens an email to support@coremodehq.com.</p>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="brand">
+        <img src="assets/mark.svg" alt="" width="28" height="28" />
+        <span class="wordmark">coremode</span>
+      </div>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="how.html">How it works</a>
+        <a href="integrations.html">Integrations</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <p>This site sets no cookies and loads nothing from anyone else.</p>
+    </footer>
+  </body>
+</html>

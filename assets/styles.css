@@ -1585,3 +1585,47 @@ button.button:focus-visible {
 .statement--answer {
   color: #fff;
 }
+
+/* ---- privacy page ---- */
+
+.compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 44px;
+}
+
+.plain {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+  color: var(--ink-2);
+}
+
+.plain li {
+  position: relative;
+  padding-left: 24px;
+}
+
+.plain li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.5em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--mint);
+}
+
+.plain--no li::before {
+  border-radius: 2px;
+  background: var(--rose);
+}
+
+@media (max-width: 880px) {
+  .compare {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
