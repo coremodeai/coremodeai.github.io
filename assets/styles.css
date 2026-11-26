@@ -800,3 +800,129 @@ h3 {
     animation: none;
   }
 }
+
+/* ---- the engine: the idea at the top that everything else hangs from ---- */
+
+.engine {
+  position: relative;
+  margin-bottom: 72px;
+  padding: 44px;
+  border-radius: 30px;
+  border: 1px solid rgba(149, 133, 248, 0.5);
+  background:
+    radial-gradient(70% 90% at 12% 0%, rgba(124, 105, 243, 0.3), transparent 70%),
+    radial-gradient(50% 70% at 95% 100%, rgba(76, 125, 240, 0.18), transparent 70%),
+    rgba(13, 15, 34, 0.9);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 110px rgba(111, 91, 239, 0.22);
+}
+
+.engine__head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.engine__head img {
+  flex: none;
+  border-radius: 28%;
+  box-shadow: 0 0 40px rgba(124, 105, 243, 0.85);
+}
+
+.engine__name {
+  font-family: var(--round);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--violet-text);
+}
+
+.engine h2 {
+  max-width: none;
+  margin-top: 2px;
+}
+
+.pillars {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.pillars li {
+  position: relative;
+  padding: 26px;
+  border-radius: 22px;
+  background: var(--glass);
+  border: 1px solid var(--edge);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09);
+}
+
+/* The three parts feed one another, left to right. */
+.pillars li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: -17px;
+  top: 50px;
+  width: 11px;
+  height: 11px;
+  border-top: 2.5px solid var(--violet-text);
+  border-right: 2.5px solid var(--violet-text);
+  transform: rotate(45deg);
+}
+
+.pillar__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  color: var(--violet-text);
+  background: rgba(140, 124, 247, 0.2);
+  border: 1px solid rgba(149, 133, 248, 0.45);
+  box-shadow: 0 0 30px rgba(124, 105, 243, 0.4);
+}
+
+.pillars h3 {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 720;
+  letter-spacing: -0.03em;
+}
+
+.pillar__role {
+  margin-top: 2px;
+  font-family: var(--serif);
+  font-size: 19px;
+  font-style: italic;
+  color: var(--violet-text);
+}
+
+.pillars li p:last-child {
+  margin-top: 12px;
+  color: var(--ink-2);
+}
+
+@media (max-width: 880px) {
+  .engine {
+    margin-bottom: 48px;
+    padding: 26px 20px;
+    border-radius: 24px;
+  }
+
+  .pillars {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Stacked, the arrow points down between cards. */
+  .pillars li:not(:last-child)::after {
+    right: auto;
+    left: 50px;
+    top: auto;
+    bottom: -17px;
+    transform: rotate(135deg);
+  }
+}
