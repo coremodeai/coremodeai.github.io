@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>coremode: know what needs you</title>
+    <meta
+      name="description"
+      content="coremode reads the work happening across your company and gives each person the few things that need them, with the evidence attached. Private by design."
+    />
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="/" aria-label="coremode home">
+        <img src="assets/mark.svg" alt="" width="36" height="36" />
+        <span class="wordmark">coremode</span>
+      </a>
+      <nav class="top__nav" aria-label="Sections">
+        <a href="#how">How it works</a>
+        <a href="#privacy">Privacy</a>
+        <a class="button button--quiet" href="#partners">Work with us</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero: the claim on the left, the product itself on the right. -->
+      <section class="hero">
+        <svg class="hero__wave" viewBox="0 0 900 220" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="wave-stroke" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0" stop-color="#3f6df0" stop-opacity="0" />
+              <stop offset="0.3" stop-color="#4f7bf5" />
+              <stop offset="0.65" stop-color="#9a7dfb" />
+              <stop offset="0.85" stop-color="#d58bfb" />
+              <stop offset="1" stop-color="#b678f6" stop-opacity="0.2" />
+            </linearGradient>
+            <linearGradient id="wave-fill" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0" stop-color="#7c69f3" stop-opacity="0.3" />
+              <stop offset="1" stop-color="#7c69f3" stop-opacity="0" />
+            </linearGradient>
+            <filter id="wave-glow" x="-10%" y="-80%" width="120%" height="260%">
+              <feGaussianBlur stdDeviation="9" />
+            </filter>
+          </defs>
+          <path d="M0 178 C 220 182, 330 168, 470 104 S 700 18, 900 70 L 900 220 L 0 220 Z" fill="url(#wave-fill)" />
+          <path d="M0 178 C 220 182, 330 168, 470 104 S 700 18, 900 70" fill="none" stroke="url(#wave-stroke)" stroke-width="10" filter="url(#wave-glow)" opacity="0.9" />
+          <path d="M0 178 C 220 182, 330 168, 470 104 S 700 18, 900 70" fill="none" stroke="url(#wave-stroke)" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+
+        <div class="hero__copy">
+          <h1>Know what needs you. Let the rest keep moving.</h1>
+          <p class="lede">
+            coremode reads the work happening across your company's tools and
+            gives each person the few things that need them today, with the
+            evidence attached.
+          </p>
+          <div class="hero__actions">
+            <a class="button" href="#partners">Become a design partner</a>
+            <a class="link" href="#how">See how it works</a>
+          </div>
+          <p class="fine">In early development with a small group of companies.</p>
+        </div>
+
+        <!-- A rendering of the Focus screen, in plain HTML. -->
+        <div class="screen" role="img" aria-label="The coremode Focus screen showing two things that need the person, and what is approaching.">
+          <p class="screen__line">Two things need you now. One is already late.</p>
+
+          <article class="item item--late">
+            <div class="item__meta">
+              <span class="kind kind--action">Action</span>
+              <span class="due due--late">2 days late</span>
+            </div>
+            <h3>Answer the customer's security questionnaire</h3>
+            <p>
+              Your answers are drafted. Sales can't send the pilot contract
+              until this goes out, and the January start depends on it.
+            </p>
+            <div class="item__buttons">
+              <span class="chip chip--primary">Send the email</span>
+              <span class="chip">I've done it</span>
+            </div>
+          </article>
+
+          <article class="item">
+            <div class="item__meta">
+              <span class="kind kind--decision">Decision</span>
+              <span class="due">Needed today</span>
+            </div>
+            <h3>Choose the scope of the first pilot</h3>
+            <p>
+              One customer wants its 8-person leadership team. The other wants
+              all 60 people but needs three more weeks. There is capacity for one.
+            </p>
+            <p class="item__sources">Based on 3 sources</p>
+          </article>
+
+          <div class="soon">
+            <p class="soon__label">Approaching</p>
+            <p><span class="soon__when">Friday</span> Trademark search result, waiting on counsel</p>
+            <p><span class="soon__when">Dec 8</span> Pilot kickoff, will need you</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="problem">
+        <p class="statement">
+          Nobody can read everything their company writes in a day. So the
+          important thing sits in a thread someone meant to get back to, and
+          the person it was waiting on never knew.
+        </p>
+        <p class="statement statement--answer">
+          coremode reads all of it, so that each person sees only their part.
+        </p>
+      </section>
+
+      <section class="how" id="how">
+        <h2>Two screens you look at, and one you read</h2>
+
+        <div class="view">
+          <div class="view__text">
+            <h3>Focus</h3>
+            <p>
+              The handful of things that need you: a decision only you can
+              make, something prepared and waiting for your go-ahead, two teams
+              expecting different things. Never more than a few at once, late
+              ones first.
+            </p>
+            <p>
+              Each one says what is being asked and what depends on it, links
+              to the messages and documents it came from, and has a button that
+              finishes it.
+            </p>
+          </div>
+          <div class="view__show">
+            <article class="item">
+              <div class="item__meta">
+                <span class="kind kind--alignment">Alignment</span>
+                <span class="due">Needed today</span>
+              </div>
+              <h3>Sales and Engineering expect different start dates</h3>
+              <p>
+                Sales told the customer January 13. Engineering is planning for
+                January 20. One of the two has to move.
+              </p>
+              <div class="item__buttons">
+                <span class="chip chip--primary">Align on January 13</span>
+                <span class="chip chip--primary">Align on January 20</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="view">
+          <div class="view__text">
+            <h3>Signals</h3>
+            <p>
+              Things worth knowing that ask nothing of you: something finished,
+              something changed, a pattern nobody said out loud. Acknowledge
+              them or ignore them. They clear themselves after a few days.
+            </p>
+          </div>
+          <div class="view__show">
+            <div class="rows">
+              <div class="row">
+                <span class="kind kind--milestone">Milestone</span>
+                <h3>The billing migration is complete</h3>
+                <p>This closes the largest piece of the quarter's reliability goal.</p>
+              </div>
+              <div class="row">
+                <span class="kind kind--insight">Insight</span>
+                <h3>Prospects ask about privacy before price</h3>
+                <p>Six of the last eight discovery calls raised it first.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="view">
+          <div class="view__text">
+            <h3>Perspective</h3>
+            <p>
+              A few paragraphs, revised when something material changes, on
+              where the company is heading and where you stand in it. It opens
+              with what changed since you last read it.
+            </p>
+          </div>
+          <div class="view__show">
+            <blockquote class="reading">
+              <p>
+                The company is moving from proving the idea to proving that
+                people will pay for it. You own all three goals for the
+                quarter, and Engineering is waiting on you for the pilot scope.
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="privacy" id="privacy">
+        <h2>Built so that it cannot become surveillance</h2>
+        <p class="lede">
+          A system that reads a company's work could easily turn into a way of
+          watching people. We designed against that from the first line of
+          code, as structure and not as a setting.
+        </p>
+        <dl class="promises">
+          <div>
+            <dt>What is private stays private</dt>
+            <dd>
+              Your email, your direct messages, and your notes inform only what
+              coremode shows you. They never reach your manager, your company's
+              administrators, or anyone else.
+            </dd>
+          </div>
+          <div>
+            <dt>Seniority opens nothing</dt>
+            <dd>
+              A chief executive or an administrator sees a private space only
+              if they are a member of it. Otherwise they cannot tell that it
+              exists.
+            </dd>
+          </div>
+          <div>
+            <dt>The system decides access, not the model</dt>
+            <dd>
+              Who may see what is enforced by ordinary, tested code. An AI
+              model is never asked whether to show something to someone.
+            </dd>
+          </div>
+          <div>
+            <dt>Everything traces to its source</dt>
+            <dd>
+              Each thing coremode tells you links to the messages and documents
+              behind it, in the tools they came from, so you can check it.
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="fit">
+        <h2>It works alongside the tools you already use</h2>
+        <p class="lede">
+          coremode does not replace your chat, your email, or your project
+          tracker. It reads them, and when something needs doing it does it
+          there: sends the email, posts the message, creates the issue.
+        </p>
+        <p class="fine">
+          Starting with Google Workspace and Slack. Linear, Okta, and Workday follow.
+        </p>
+      </section>
+
+      <section class="partners" id="partners">
+        <h2>We are looking for a few design partners</h2>
+        <p class="lede">
+          If you run a company of 30 to 150 people and coordination has started
+          to cost you, we would like to build this with you. You get the
+          product early and a direct line to the people making it. We get to
+          find out what is useful in a real company.
+        </p>
+        <a class="button" href="mailto:hello@coremodehq.com?subject=Design%20partner">
+          Write to hello@coremodehq.com
+        </a>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="brand">
+        <img src="assets/mark.svg" alt="" width="28" height="28" />
+        <span class="wordmark">coremode</span>
+      </div>
+      <p>This site sets no cookies and loads nothing from anyone else.</p>
+    </footer>
+  </body>
+</html>
