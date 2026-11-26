@@ -70,48 +70,28 @@
           <p class="fine">In early development with a small group of companies.</p>
         </div>
 
-        <!-- A rendering of the Focus screen, in plain HTML. -->
-        <div class="screen" role="img" aria-label="The coremode Focus screen showing two things that need the person, and what is approaching.">
-          <p class="screen__line">Two things need you now. One is already late.</p>
+        <!-- A rendering of the app's home screen, in plain HTML. -->
+        <div class="screen home" role="img" aria-label="The coremode home screen: five things need you, one already late, and the three that need you first.">
+          <p class="home__title">Your organization, in motion.</p>
+          <p class="home__line">5 things need you, 1 already late. Everything else is moving.</p>
 
-          <article class="item item--late">
-            <div class="item__meta">
-              <span class="kind kind--action">Action</span>
-              <span class="due due--late">2 days late</span>
-            </div>
-            <h3>Answer the customer's security questionnaire</h3>
-            <p>
-              Your answers are drafted. Sales can't send the pilot contract
-              until this goes out, and the January start depends on it.
-            </p>
-            <div class="item__buttons">
-              <span class="chip chip--primary">Send the email</span>
-              <span class="chip">I've done it</span>
-            </div>
-          </article>
+          <div class="tiles">
+            <div class="tile"><span class="tile__name">Focus</span><span class="tile__n">5</span><span class="tile__note tile__note--late">1 late</span></div>
+            <div class="tile"><span class="tile__name">Signals</span><span class="tile__n">4</span><span class="tile__note">worth knowing</span></div>
+            <div class="tile"><span class="tile__name">Objectives</span><span class="tile__n">3</span><span class="tile__note tile__note--good">1 on track</span></div>
+            <div class="tile"><span class="tile__name">Organization</span><span class="tile__n">14</span><span class="tile__note">people</span></div>
+          </div>
 
-          <article class="item">
-            <div class="item__meta">
-              <span class="kind kind--decision">Decision</span>
-              <span class="due">Needed today</span>
-            </div>
-            <h3>Choose the scope of the first pilot</h3>
-            <p>
-              One customer wants its 8-person leadership team. The other wants
-              all 60 people but needs three more weeks. There is capacity for one.
-            </p>
-            <p class="item__sources">Based on 3 sources</p>
-          </article>
-
-          <div class="soon">
-            <p class="soon__label">Approaching</p>
-            <p><span class="soon__when">Friday</span> Trademark search result, waiting on counsel</p>
-            <p><span class="soon__when">Dec 8</span> Pilot kickoff, will need you</p>
+          <div class="first">
+            <p class="first__label">Needs you first</p>
+            <p class="first__row"><strong>Answer the customer's security questionnaire</strong><span><span class="kind kind--action">Action</span> <span class="due due--late">2 days late</span></span></p>
+            <p class="first__row"><strong>Choose the scope of the first pilot</strong><span><span class="kind kind--decision">Decision</span> <span class="due">Needed today</span></span></p>
+            <p class="first__row"><strong>Sales and Engineering expect different start dates</strong><span><span class="kind kind--alignment">Alignment</span> <span class="due">Needed today</span></span></p>
           </div>
         </div>
       </section>
 
-      <!-- The engine and its three parts: the idea everything else hangs from. -->
+      <!-- The one idea, in three parts. The detail is on How it works. -->
       <section class="engine" id="engine">
         <div class="engine__head">
           <img src="assets/mark.svg" alt="" width="56" height="56" />
@@ -120,127 +100,39 @@
             <h2>It works without being asked</h2>
           </div>
         </div>
-        <p class="lede">
-          Most AI tools wait for a question. The engine runs in the background
-          all day, keeps track of where your company is trying to go, and
-          comes to the right person when something needs them.
-        </p>
 
         <ol class="pillars">
           <li>
-            <span class="pillar__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="8" />
-                <circle cx="12" cy="12" r="3.2" />
-                <path d="m14.5 9.5 5-5M16.5 4.5h3v3" />
-              </svg>
-            </span>
             <h3>Objectives</h3>
             <p class="pillar__role">The destination</p>
-            <p>
-              You say what the company is trying to achieve. Goals run from
-              the company down to each team and person, so the engine knows
-              what matters, and to whom.
-            </p>
+            <p>You say where the company is going.</p>
           </li>
           <li>
-            <span class="pillar__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 3.5 20.5 8 12 12.5 3.5 8z" />
-                <path d="m3.5 12 8.5 4.5 8.5-4.5M3.5 16l8.5 4.5 8.5-4.5" />
-              </svg>
-            </span>
             <h3>Knowledge</h3>
             <p class="pillar__role">The map</p>
-            <p>
-              The engine reads your tools continuously and keeps a current
-              picture of who is doing what, what was promised, and what
-              changed. Nobody writes a status update.
-            </p>
+            <p>It reads your tools and keeps the picture current.</p>
           </li>
           <li>
-            <span class="pillar__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 12h3.5l2.5-6.5 4.5 13 2.5-6.5H21" />
-              </svg>
-            </span>
             <h3>Signals</h3>
             <p class="pillar__role">The moment you are needed</p>
-            <p>
-              When something bears on an objective, the engine tells the
-              person it concerns: a decision to make, an action ready to go,
-              or simply something worth knowing.
-            </p>
+            <p>It comes to you only when something is yours.</p>
           </li>
         </ol>
       </section>
 
-      <section class="problem">
-        <p class="statement">
-          Nobody can read everything their company writes in a day. So the
-          important thing sits in a thread someone meant to get back to, and
-          the person it was waiting on never knew.
-        </p>
-        <p class="statement statement--answer">
-          coremode reads all of it and keeps things moving, so that each
-          person is asked only for their part.
-        </p>
-      </section>
-
-      <section class="summary">
-        <h2>How signals reach you</h2>
-        <p class="lede">
-          Everything the engine has for you arrives in one of three places:
-          two screens you look at, and one you read.
-        </p>
-        <dl class="trio">
-          <div>
-            <dt>Focus</dt>
-            <dd>
-              The handful of things that need you today. Never more than a few
-              at once, each with a button that finishes it.
-            </dd>
-          </div>
-          <div>
-            <dt>Signals</dt>
-            <dd>
-              Things worth knowing that ask nothing of you. Acknowledge them or
-              let them clear themselves.
-            </dd>
-          </div>
-          <div>
-            <dt>Perspective</dt>
-            <dd>
-              A few paragraphs on where the company is heading and where you
-              stand in it, revised when something material changes.
-            </dd>
-          </div>
-        </dl>
-        <a class="link" href="how.html">How it works, in detail</a>
-      </section>
-
-      <section class="privacy" id="privacy">
-        <h2>Built so that it cannot become surveillance</h2>
-        <p class="lede">
-          Your email, your messages, and your notes shape what coremode shows
-          you and no one else. Seniority opens nothing: an executive or an
-          administrator cannot see a private space they are not in, or even
-          tell that it exists.
-        </p>
-        <p class="more"><a class="link" href="privacy.html">How privacy works in coremode</a></p>
-      </section>
-
-      <section class="fit">
-        <h2>It works alongside the tools you already use</h2>
-        <p class="lede">
-          coremode does not replace your chat, your email, or your project
-          tracker. It reads them, and when something needs doing it does it
-          there: sends the email, posts the message, creates the issue.
-        </p>
-        <p class="fine">
-          Starting with Google Workspace and Slack. Linear, Okta, and Workday follow.
-        </p>
-        <p class="more"><a class="link" href="integrations.html">Integrations, and when it asks you first</a></p>
+      <section class="ways" aria-label="More about coremode">
+        <a class="way" href="how.html">
+          <h3>How it works</h3>
+          <p>Focus, Signals, and Perspective, and what happens to a message.</p>
+        </a>
+        <a class="way" href="privacy.html">
+          <h3>Private by design</h3>
+          <p>Your email and messages inform only you. Seniority opens nothing.</p>
+        </a>
+        <a class="way" href="integrations.html">
+          <h3>Works in your tools</h3>
+          <p>It reads Google Workspace and Slack, and acts there when you approve.</p>
+        </a>
       </section>
 
       <section class="demo" id="demo">

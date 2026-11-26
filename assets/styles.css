@@ -1629,3 +1629,193 @@ button.button:focus-visible {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* ================================================================
+ * Landing: the home screen, and three ways further in
+ * ================================================================ */
+
+.home__title {
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 720;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.home__line {
+  margin-top: 8px;
+  font-size: 16px;
+  color: var(--ink-2);
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.tile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: 2px 10px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--edge);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.tile__name {
+  grid-column: 1 / -1;
+  font-size: 14px;
+  font-weight: 620;
+  color: var(--ink-2);
+}
+
+.tile__n {
+  font-size: 34px;
+  font-weight: 740;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+
+.tile__note {
+  font-size: 14px;
+  font-weight: 620;
+  color: var(--ink-3);
+}
+
+.tile__note--late {
+  color: var(--rose);
+}
+
+.tile__note--good {
+  color: var(--mint);
+}
+
+.first {
+  margin-top: 12px;
+  padding: 16px 18px 6px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--edge);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.first__label {
+  font-size: 16px;
+  font-weight: 680;
+}
+
+.first__row {
+  display: grid;
+  gap: 3px;
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+.first__row + .first__row {
+  border-top: 1px solid var(--line);
+}
+
+.first__row strong {
+  font-size: 16px;
+  font-weight: 660;
+  line-height: 1.3;
+}
+
+.first__row .kind,
+.first__row .due {
+  font-size: 14px;
+  font-weight: 620;
+}
+
+/* The landing's pillars carry one line each. */
+.pillars li p:last-child {
+  font-size: 17px;
+  color: var(--ink-2);
+}
+
+.ways {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding-block: 72px;
+}
+
+.way {
+  display: block;
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--edge);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 16px 38px rgba(0, 0, 0, 0.55);
+  color: inherit;
+  text-decoration: none;
+}
+
+.way:hover,
+.way:focus-visible {
+  background: var(--surface-2);
+  border-color: var(--accent);
+}
+
+.way:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.way h3 {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.way p {
+  margin-top: 8px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+@media (max-width: 880px) {
+  .ways {
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: 48px;
+  }
+}
+
+.first__row .due--late {
+  color: var(--rose);
+}
+
+/* ---- joining a company that is already set up ---- */
+
+.join {
+  max-width: 620px;
+  margin-top: 56px;
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--edge);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.join h2 {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.join p {
+  margin: 8px 0 18px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+.claim__form .button {
+  margin-top: 18px;
+}
