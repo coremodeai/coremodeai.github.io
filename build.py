@@ -12,6 +12,9 @@ import pathlib
 import re
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).parent / "src"))
+from topics import TOPICS  # noqa: E402
+
 ROOT = pathlib.Path(__file__).parent
 SRC = ROOT / "src"
 
@@ -20,35 +23,35 @@ SRC = ROOT / "src"
 NAV = [
     {"label": "Platform", "href": "platform.html",
      "features": [
-         ("Objectives", "Goals that connect the company to each person", "platform.html#objectives"),
-         ("Focus", "What needs you now, and what comes next", "platform.html#focus"),
-         ("Signals", "What changed, with the evidence behind it", "platform.html#signals"),
-         ("Perspective", "Where you stand, written for you", "platform.html#perspective"),
+         ("Objectives", "Goals that connect the company to each person", "objectives.html"),
+         ("Focus", "What needs you now, and what comes next", "focus.html"),
+         ("Signals", "What changed, with the evidence behind it", "signals.html"),
+         ("Perspective", "Where you stand, written for you", "perspective.html"),
      ],
-     "links": [("Integrations", "integrations.html"), ("Actions", "integrations.html#actions"),
-               ("Knowledge", "platform.html#knowledge"), ("Privacy", "privacy.html")]},
+     "links": [("Integrations", "integrations.html"), ("Actions", "actions.html"),
+               ("Knowledge", "knowledge.html"), ("Privacy", "privacy.html")]},
     {"label": "Solutions", "href": "solutions.html",
      "features": [
-         ("Leaders", "See the company move without asking for reports", "solutions.html#leaders"),
-         ("Managers", "Know what is stuck before the meeting", "solutions.html#managers"),
-         ("Everyone", "Start the day knowing what matters", "solutions.html#everyone"),
+         ("Leaders", "See the company move without asking for reports", "leaders.html"),
+         ("Managers", "Know what is stuck before the meeting", "managers.html"),
+         ("Everyone", "Start the day knowing what matters", "everyone.html"),
      ],
-     "links": [("Alignment", "solutions.html#alignment"), ("Decisions", "solutions.html#decisions"),
-               ("Follow-through", "solutions.html#follow-through")]},
+     "links": [("Alignment", "alignment.html"), ("Decisions", "decisions.html"),
+               ("Follow-through", "follow-through.html")]},
     {"label": "Resources", "href": "resources.html",
      "features": [
-         ("How it works", "From your tools to your day, in three steps", "resources.html#how"),
-         ("Request a demo", "See it with a company shaped like yours", "resources.html#demo"),
-         ("Guides", "Set up, connect, and get value fast", "resources.html#guides", "Soon"),
-         ("Developers", "Build on the coremode platform", "resources.html#developers", "Soon"),
+         ("How it works", "From your tools to your day, in three steps", "how-it-works.html"),
+         ("Request a demo", "See it with a company shaped like yours", "demo.html"),
+         ("Guides", "Set up, connect, and get value fast", "guides.html", "Soon"),
+         ("Developers", "Build on the coremode platform", "developers.html", "Soon"),
      ],
-     "links": [("Support", "resources.html#support"), ("Privacy", "privacy.html"),
+     "links": [("Support", "support.html"), ("Privacy", "privacy.html"),
                ("Enterprise", "enterprise.html"), ("Pricing", "pricing.html")]},
     {"label": "Enterprise", "href": "enterprise.html"},
     {"label": "Pricing", "href": "pricing.html"},
 ]
 # Old addresses that now live elsewhere.
-REDIRECTS = {"how.html": "resources.html#how"}
+REDIRECTS = {"how.html": "how-it-works.html"}
 SIGN_IN = "https://login.coremode.ai/"
 SIGN_UP = "signup.html"
 
@@ -113,7 +116,7 @@ def header(page):
         current = ""
         if top["href"] == page:
             current = ' aria-current="page"'
-        elif "features" in top and any(f[2].split("#")[0] == page for f in top["features"]):
+        elif "features" in top and any(i[1].split("#")[0] == page for i in flat(top)):
             current = ' aria-current="true"'
         if "features" in top:
             links.append(
@@ -197,6 +200,74 @@ LAYOUT = '''<!doctype html>
 </html>
 '''
 
+# ---- topic pages: one per menu item, all the same shape ----------------------
+def cells(items, numbered=False):
+    out = []
+    for n, (head, line) in enumerate(items, 1):
+        number = f'<span class="cell__n">{n}</span>' if numbered else ""
+        out.append(f'          <{"li" if numbered else "div"} class="cell">{number}<h3>{head}</h3><p>{line}</p></{"li" if numbered else "div"}>')
+    return "\n".join(out)
+
+
+def topic_page(t):
+    menu = next(m for m in NAV if m["label"] == t["menu"])
+    soon = ' <span class="tag">Soon</span>' if t.get("soon") else ""
+    action = ""
+    if "action" in t:
+        action = f'\n          <div class="actions"><a class="button" href="{t["action"][1]}">{t["action"][0]}</a></div>'
+    out = [f'''      <section class="hero hero--stage">
+        {{{{backdrop}}}}
+        <div>
+          <p class="eyebrow"><a class="eyebrow__link" href="{menu["href"]}">{t["menu"]}</a> / {t["name"]}{soon}</p>
+          <h1>{t["h1"]}</h1>
+          <p class="lede">{t["lede"]}</p>{action}
+        </div>
+      </section>
+''']
+    points = f'<div class="grid grid--3">\n{cells(t["points"])}\n        </div>'
+    if "mock" in t:
+        out.append(f'''      <section class="section">
+        <div class="split">
+          <div class="split__text">
+            <ul class="list">
+{"".join(f"              <li><strong>{h}.</strong> {l}</li>" + chr(10) for h, l in t["points"])}            </ul>
+          </div>
+          {{{{{t["mock"]}}}}}
+        </div>
+      </section>
+''')
+    else:
+        out.append(f'      <section class="section">\n        {points}\n      </section>\n')
+    for key in ("more", "steps"):
+        if key in t:
+            head, items = t[key]
+            tag = "ol" if key == "steps" else "div"
+            out.append(f'''      <section class="section">
+        <div class="section__head">
+          <h2>{head}</h2>
+        </div>
+        <{tag} class="grid grid--{len(items)}">
+{cells(items, numbered=key == "steps")}
+        </{tag}>
+      </section>
+''')
+    here = t["slug"] + ".html"
+    others = [i for i in flat(menu) if i[1] != here][:4]
+    links = "\n".join(f'          <a class="cell cell--link" href="{i[1]}"><h3>{i[0]}</h3></a>' for i in others)
+    out.append(f'''      <section class="section">
+        <div class="section__head">
+          <h2>More in {t["menu"]}</h2>
+        </div>
+        <div class="grid grid--{len(others)}">
+{links}
+        </div>
+      </section>
+''')
+    if "action" not in t:
+        out.append("{{cta}}")
+    return {"title": t["title"], "description": t["about"]}, "\n".join(out)
+
+
 # ---- design rules, checked on every build -----------------------------------
 MAX_WORDS = 28      # in any one paragraph, list item or definition
 MAX_H1 = 60         # characters
@@ -247,21 +318,26 @@ def build():
     errors, used = [], set()
     defined = lint_css(errors)
     partials = {p.stem: p.read_text().rstrip() for p in (SRC / "partials").glob("*.html")}
-    pages = sorted((SRC / "pages").glob("*.html"))
-    for path in pages:
+    sources = []
+    for path in sorted((SRC / "pages").glob("*.html")):
         source = path.read_text()
         head = re.match(r"<!--(.*?)-->\s*", source, flags=re.S)
         if not head:
             sys.exit(f"{path.name}: starts with no <!-- title / description --> block")
         meta = dict(re.findall(r"^\s*(\w+):\s*(.+?)\s*$", head.group(1), flags=re.M))
-        body = source[head.end():].rstrip()
+        sources.append((path.name, meta, source[head.end():].rstrip()))
+    for t in TOPICS:
+        meta, body = topic_page(t)
+        sources.append((t["slug"] + ".html", meta, body))
+    pages = sources
+    for name, meta, body in sources:
         body = re.sub(r"\{\{icon:(\w+)\}\}", lambda m: icon(m.group(1)), body)
-        body = re.sub(r"\{\{(\w+)\}\}", lambda m: partials[m.group(1)], body)
-        built = LAYOUT.format(name=path.name, title=html.escape(meta["title"]),
-                              description=html.escape(meta["description"], quote=True),
-                              header=header(path.name), content=body, footer=footer())
-        lint_page(path.name, meta, body, built, defined, used, errors)
-        (ROOT / path.name).write_text(built)
+        body = re.sub(r"\{\{([\w-]+)\}\}", lambda m: partials[m.group(1)], body)
+        built = LAYOUT.format(name=name, title=html.escape(meta["title"]),
+                              description=html.escape(meta["description"]),
+                              header=header(name), content=body, footer=footer())
+        lint_page(name, meta, body, built, defined, used, errors)
+        (ROOT / name).write_text(built)
     for old, new in REDIRECTS.items():
         (ROOT / old).write_text(
             '<!doctype html>\n<html lang="en">\n  <head>\n    <meta charset="utf-8" />\n'

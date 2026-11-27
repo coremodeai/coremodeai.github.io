@@ -1,0 +1,191 @@
+"""One page per menu item. build.py turns each entry into <slug>.html.
+
+Every page has the same shape: a stage hero, three points, one optional
+detail section, links to its neighbours, and the closing band.
+
+    slug      the file name, without .html
+    menu      the menu it belongs to: "Platform", "Solutions", or "Resources"
+    name      what the menu calls it
+    title     the browser title (65 characters at most)
+    about     the search description (160 at most)
+    h1, lede  the hero
+    points    three (heading, line) pairs
+    more      optional: (heading, [(heading, line), ...]) for a second section
+    steps     optional: like more, but numbered
+    mock      optional: a partial from src/partials shown beside the points
+    action    optional: (label, href) for a button in the hero
+    soon      optional: True marks the page as not yet available
+"""
+
+MAIL = "mailto:support@coremodehq.com"
+
+TOPICS = [
+    # ---- Platform ----
+    dict(slug="objectives", menu="Platform", name="Objectives",
+         title="coremode Objectives: every goal, connected",
+         about="Goals run from the company to each team and person. Progress comes from the work itself, not from status reports.",
+         h1="Every goal, connected.", lede="From the company to each team and person.",
+         points=[("One line of sight", "Each goal sits under the one it serves."),
+                 ("Evidence, not updates", "Progress comes from the work itself. Nobody writes a status report."),
+                 ("Context for everything", "Objectives tell coremode what matters, so it knows what to bring you.")],
+         steps=("How it works", [
+             ("Set the destination", "Leaders set company goals once."),
+             ("Connect each team", "Teams and people link their goals upward."),
+             ("coremode keeps watch", "When work drifts from a goal, the owner hears about it.")])),
+    dict(slug="focus", menu="Platform", name="Focus",
+         title="coremode Focus: what needs you now",
+         about="A short list of what needs you, late things first. One button finishes each item, and every item links to its sources.",
+         h1="What needs you now.", lede="A short list. Late things first.",
+         mock="mock-focus",
+         points=[("A few at a time", "Never a backlog. What needs you today, and what comes next."),
+                 ("One button", "Decide, approve, or set it aside until later."),
+                 ("Sources attached", "Every item links to where it came from.")],
+         more=("Built for your attention", [
+             ("Ready when you open it", "Worked out ahead of time. No waiting."),
+             ("Private to you", "Your list is yours. Nobody else sees it."),
+             ("It comes back", "Set something aside and say when. It returns by itself.")])),
+    dict(slug="signals", menu="Platform", name="Signals",
+         title="coremode Signals: what changed, with the evidence",
+         about="Signals tell you what finished, what changed, and what nobody said out loud. Each reaches only the people it concerns.",
+         h1="What changed, and why it matters.", lede="Worth knowing. Asks nothing of you.",
+         mock="mock-signals",
+         points=[("Accomplishments", "Finished work gets seen, with the evidence."),
+                 ("Changes", "A date moved. A decision landed. You hear once."),
+                 ("Insights", "A pattern nobody said out loud.")],
+         more=("Only what concerns you", [
+             ("The right person", "A signal reaches who it concerns, and no one else."),
+             ("Evidence attached", "Open the source in the tool it came from."),
+             ("You shape it", "Rate a signal or dismiss it. coremode adjusts.")])),
+    dict(slug="perspective", menu="Platform", name="Perspective",
+         title="coremode Perspective: where you stand",
+         about="A short read on where the company is heading and your part in it. Revised when something material changes.",
+         h1="Where you stand.", lede="A short read, not a dashboard.",
+         mock="mock-perspective",
+         points=[("Written for you", "The company's direction, and your part in it."),
+                 ("Revised, not refreshed", "It changes when something material changes."),
+                 ("Opens with what changed", "You see the difference first.")]),
+    dict(slug="actions", menu="Platform", name="Actions",
+         title="coremode Actions: it prepares the work, you approve",
+         about="coremode drafts the email or the issue. Nothing leaves until you approve, or until a rule you set allows it.",
+         h1="It prepares the work. You approve.", lede="Reading is automatic. Acting is not.",
+         points=[("You approve", "It drafts the email or the issue. Nothing leaves until you press the button."),
+                 ("It follows your rules", "Let routine actions go ahead. You hear about each one."),
+                 ("It always asks", "Anything that leaves the company, changes access, or can't be undone waits for a person.")],
+         more=("Safe by construction", [
+             ("A fixed list", "It does only what is in its catalog. A model never invents an action."),
+             ("Your permissions", "An action runs as the person who approved it. Never with more."),
+             ("Checked afterward", "It confirms the result. If it failed, you are told."),
+             ("On the record", "What was done, where, and on whose approval.")])),
+    dict(slug="knowledge", menu="Platform", name="Knowledge",
+         title="coremode Knowledge: a current picture of your company",
+         about="coremode reads your tools once and keeps the meaning: who is doing what, what was promised, and what changed.",
+         h1="A current picture of your company.", lede="Who is doing what, and what changed.",
+         points=[("Read once", "The meaning is kept: who said what, what was promised, what changed."),
+                 ("Always current", "It updates as work happens, not when someone asks."),
+                 ("Private stays private", "Your email and messages inform only you.")],
+         more=("Evidence, not guesses", [
+             ("Linked to sources", "Every fact points back to where it came from."),
+             ("No forced matches", "If something is unclear, it stays unmatched."),
+             ("Numbers are computed", "Software does the arithmetic, never a model.")])),
+
+    # ---- Solutions ----
+    dict(slug="leaders", menu="Solutions", name="Leaders",
+         title="coremode for leaders: see the company move",
+         about="Set the destination once. See progress backed by evidence, hear about mismatches early, and get decisions ready to make.",
+         h1="See the company move.", lede="Set the destination once. See progress backed by evidence.",
+         points=[("No status reports", "Progress comes from the work, not from slides."),
+                 ("Early warning", "Hear when teams expect different things."),
+                 ("Decisions, ready", "Each arrives with its options and its sources.")],
+         more=("What it is not", [
+             ("Not a dashboard", "A short read, revised when something changes."),
+             ("Not surveillance", "Seniority opens no one's private work."),
+             ("Not another tool to feed", "It reads the tools you already use.")])),
+    dict(slug="managers", menu="Solutions", name="Managers",
+         title="coremode for managers: know what is stuck",
+         about="Know when teams expect different things while it is still cheap to fix. Commitments are followed without chasing.",
+         h1="Know what is stuck before the meeting.", lede="Fix a mismatch while it is still cheap.",
+         points=[("Mismatches, early", "Two teams expecting different dates both hear about it."),
+                 ("Commitments followed", "From the message they were made in."),
+                 ("Less chasing", "Late items come to you. You stop asking.")],
+         more=("For your team", [
+             ("Supported, not watched", "Your team's private work stays theirs."),
+             ("Wins get seen", "Finished work is recognised, with the evidence."),
+             ("Fewer check-ins", "The picture is already current.")])),
+    dict(slug="everyone", menu="Solutions", name="Everyone",
+         title="coremode for everyone: know what matters today",
+         about="A short list of what needs you, private to you. Never a score. Your finished work gets seen without reporting it.",
+         h1="Start the day knowing what matters.", lede="A short list of what needs you. Private to you.",
+         points=[("A short list", "A few things at a time, late ones first."),
+                 ("Never a score", "coremode does not rank you or rate you."),
+                 ("Your work gets seen", "Accomplishments are noticed without you reporting them.")],
+         more=("Yours to control", [
+             ("Private by structure", "Your email and messages inform only you."),
+             ("One button", "Finish it, or set it aside until later."),
+             ("Evidence included", "Every item links to its sources.")])),
+    dict(slug="alignment", menu="Solutions", name="Alignment",
+         title="coremode for alignment: catch the mismatch early",
+         about="When teams expect different dates or outcomes, the people who can fix it hear about it early, with each side's source.",
+         h1="Catch the mismatch early.", lede="Teams expecting different dates or outcomes hear about it.",
+         points=[("Found in the work", "From what teams actually say and plan."),
+                 ("Sent to the owners", "Only the people who can fix it."),
+                 ("Both sides shown", "Each expectation, with its source.")]),
+    dict(slug="decisions", menu="Solutions", name="Decisions",
+         title="coremode for decisions: they arrive ready",
+         about="Each decision reaches the person who owns it, with its options and its sources. One button, and everyone who depends on it knows.",
+         h1="Decisions arrive ready.", lede="Each one comes with its options and its sources.",
+         points=[("To the right person", "The one who owns the decision."),
+                 ("Options laid out", "What can be chosen, and what each choice means."),
+                 ("One button", "Decide, and everyone who depends on it knows.")]),
+    dict(slug="follow-through", menu="Solutions", name="Follow-through",
+         title="coremode for follow-through: promises don't get lost",
+         about="Commitments are followed from the message they were made in. What slipped comes first.",
+         h1="Promises don't get lost.", lede="Commitments are followed from the message they were made in.",
+         points=[("Captured where made", "In a channel, an email, or a document."),
+                 ("Late ones first", "What slipped comes to the top."),
+                 ("Nobody chases", "The owner hears. Everyone else is left alone.")]),
+
+    # ---- Resources ----
+    dict(slug="how-it-works", menu="Resources", name="How it works",
+         title="How coremode works: from your tools to your day",
+         about="coremode reads your tools once, matches what it finds to goals and owners, works out what changed, and tells only who needs to know.",
+         h1="From your tools to your day.", lede="Someone mentions in a busy channel that a date slipped.",
+         points=[("It reads", "The tools you already use. Once."),
+                 ("It understands", "Who owns what, and what depends on it."),
+                 ("It tells the right person", "Everyone else hears nothing.")],
+         steps=("Step by step", [
+             ("Read once", "The meaning is kept: who said what, what was promised, what changed."),
+             ("Matched", "To a commitment, a goal, and an owner. If unclear, it stays unmatched."),
+             ("Worked out", "What depends on the new date, and who expects the old one."),
+             ("Delivered", "The owner gets it in Focus. Others who need to know get a signal.")])),
+    dict(slug="demo", menu="Resources", name="Request a demo",
+         title="Request a coremode demo",
+         about="Half an hour: the product, your company's shape, and what connecting your tools involves.",
+         h1="See it with your own work.", lede="Half an hour. The product, and what connecting your tools involves.",
+         action=("Request a demo", MAIL + "?subject=Demo%20request"),
+         points=[("Half an hour", "A live look at the product."),
+                 ("Your company's shape", "We map it to your teams and tools."),
+                 ("What setup takes", "Which tools connect, and how long it takes.")]),
+    dict(slug="guides", menu="Resources", name="Guides", soon=True,
+         title="coremode guides: coming soon",
+         about="Guides for setting up coremode, your first week, and administration are on the way.",
+         h1="Guides are coming.", lede="Setup, and your first week.",
+         points=[("Setup", "Connect your tools and invite your team."),
+                 ("First week", "What to expect as coremode learns your company."),
+                 ("Administration", "Seats, private spaces, and connections.")]),
+    dict(slug="developers", menu="Resources", name="Developers", soon=True,
+         title="coremode for developers: coming soon",
+         about="Developer documentation for coremode is in progress. Tell us what you want to build.",
+         h1="Developer docs are coming.", lede="Tell us what you want to build.",
+         action=("Email us", MAIL + "?subject=Developers"),
+         points=[("API documentation", "In progress."),
+                 ("Your needs first", "What you ask for shapes what we publish first."),
+                 ("Ask early", "Email us and we will keep you posted.")]),
+    dict(slug="support", menu="Resources", name="Support",
+         title="coremode support",
+         about="Questions, problems, or a tool you need connected. Email support@coremodehq.com.",
+         h1="We're here to help.", lede="Questions, problems, or a tool you need connected.",
+         action=("Email support", MAIL),
+         points=[("Ask a question", "About the product, pricing, or privacy."),
+                 ("Report a problem", "Tell us what happened, and what you expected."),
+                 ("Request a connection", "Name the tool. We will tell you where it stands.")]),
+]

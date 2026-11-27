@@ -148,7 +148,7 @@ h3 { font-size: var(--text-m); font-weight: var(--weight-medium); }
 .hero__aside { display: flex; flex-direction: column; align-items: flex-end; gap: var(--space-2); }
 /* The stage: a tall hero with the product drifting behind the words. */
 .hero--stage {
-  position: relative; min-height: 64vh; align-content: end;
+  position: relative; min-height: min(64vh, 560px); align-content: end;
   padding-bottom: var(--space-8); border-bottom: 1px solid var(--color-border);
 }
 .hero--stage > div:not(.backdrop) { position: relative; }
@@ -171,7 +171,9 @@ h3 { font-size: var(--text-m); font-weight: var(--weight-medium); }
 .section__head { margin-bottom: var(--space-6); }
 .section__head .lede { margin-top: var(--space-3); }
 .section > .note { margin-top: var(--space-4); }
-.eyebrow { font-size: var(--text-s); color: var(--color-accent-text); margin-bottom: var(--space-2); }
+.eyebrow { display: flex; align-items: center; gap: var(--space-2); font-size: var(--text-s); color: var(--color-accent-text); margin-bottom: var(--space-2); }
+.eyebrow__link { color: var(--color-text-3); text-decoration: none; }
+.eyebrow__link:hover { color: var(--color-text); }
 
 /* ---- chapter: one idea, one screen. The home page is a run of these. ---- */
 .chapter { display: grid; place-content: center; justify-items: center; min-height: 72vh; padding-block: var(--space-8); text-align: center; }
@@ -233,6 +235,7 @@ h3 { font-size: var(--text-m); font-weight: var(--weight-medium); }
   display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: center;
   padding-block: var(--space-7); border-top: 1px solid var(--color-border);
 }
+.hero--stage + .section > .split { border-top: 0; padding-block: 0; }
 .split h3 { font-size: var(--text-l); }
 .split p { color: var(--color-text-2); }
 .split__text { display: flex; flex-direction: column; gap: var(--space-2); }

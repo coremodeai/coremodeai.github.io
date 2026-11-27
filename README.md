@@ -8,6 +8,7 @@ Plain HTML and CSS. No JavaScript. No third parties: no analytics, hosted fonts,
 |---|---|
 | Edit a page | Change `src/pages/<name>.html`, then run `python3 build.py` |
 | Edit the menus | Change `NAV` in `build.py` |
+| Edit or add a menu item's page | Change `src/topics.py`. Every menu item has its own page |
 | Edit colours or sizes | Change `assets/tokens.css` |
 | Add a component | See `DESIGN.md` |
 | Preview | `./preview.sh`, then open http://localhost:8000/ |
