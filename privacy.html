@@ -1,223 +1,173 @@
 <!doctype html>
-<html lang="en">
+<!-- Built by build.py from src/pages/privacy.html. Edit the source, not this file. -->
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark" />
-    <title>Privacy in coremode</title>
-    <meta
-      name="description"
-      content="How coremode keeps private things private: what it reads, who can see what, and what no one can see, including your employer and us."
-    />
+    <title>coremode privacy: built so it cannot become surveillance</title>
+    <meta name="description" content="Private email and messages inform only you. Seniority opens nothing. Access is enforced by code, not a model." />
     <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/tokens.css" />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
-    <header class="top">
-      <a class="brand" href="index.html" aria-label="coremode home">
-        <img src="assets/mark.svg" alt="" width="36" height="36" />
-        <span class="wordmark">coremode</span>
-      </a>
-      <nav class="top__nav" aria-label="Site">
-        <a href="how.html">How it works</a>
-        <a href="integrations.html">Integrations</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="privacy.html" aria-current="page">Privacy</a>
-        <a href="https://login.coremode.ai/">Sign in</a>
-        <a class="button" href="signup.html">Sign up</a>
-      </nav>
+    <header class="nav">
+      <div class="nav__bar wrap">
+        <a class="brand" href="index.html" aria-label="coremode home">
+          <img src="assets/mark.svg" alt="" width="24" height="24" />coremode
+        </a>
+        <nav class="nav__links" aria-label="Site"><div class="nav__item"><a class="nav__link" href="platform.html">Platform <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 3.5 3 3 3-3"/></svg></a><div class="menu"><div class="menu__inner wrap"><div><p class="menu__label">Align</p><a class="menu__link" href="platform.html#objectives">Objectives</a><a class="menu__link" href="platform.html#knowledge">Knowledge</a></div><div><p class="menu__label">See</p><a class="menu__link" href="platform.html#focus">Focus</a><a class="menu__link" href="platform.html#signals">Signals</a><a class="menu__link" href="platform.html#perspective">Perspective</a></div><div><p class="menu__label">Act</p><a class="menu__link" href="integrations.html#actions">Actions</a><a class="menu__link" href="integrations.html">Integrations</a></div></div></div></div><div class="nav__item"><a class="nav__link" href="solutions.html">Solutions <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 3.5 3 3 3-3"/></svg></a><div class="menu"><div class="menu__inner wrap"><div><p class="menu__label">Roles</p><a class="menu__link" href="solutions.html#leaders">Leaders</a><a class="menu__link" href="solutions.html#managers">Managers</a><a class="menu__link" href="solutions.html#everyone">Everyone</a></div><div><p class="menu__label">Needs</p><a class="menu__link" href="solutions.html#alignment">Alignment</a><a class="menu__link" href="solutions.html#decisions">Decisions</a><a class="menu__link" href="solutions.html#follow-through">Follow-through</a></div></div></div></div><div class="nav__item"><a class="nav__link" href="resources.html" aria-current="true">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 3.5 3 3 3-3"/></svg></a><div class="menu"><div class="menu__inner wrap"><div><p class="menu__label">Help</p><a class="menu__link" href="resources.html#demo">Request a demo</a><a class="menu__link" href="resources.html#support">Support</a></div><div><p class="menu__label">Learn</p><a class="menu__link" href="resources.html#how">How it works</a><a class="menu__link" href="resources.html#guides">Guides <span class="tag">Soon</span></a><a class="menu__link" href="resources.html#developers">Developers <span class="tag">Soon</span></a></div><div><p class="menu__label">Trust</p><a class="menu__link" href="privacy.html">Privacy</a></div></div></div></div><a class="nav__link" href="enterprise.html">Enterprise</a><a class="nav__link" href="pricing.html">Pricing</a></nav>
+        <div class="nav__auth">
+          <a class="nav__link" href="https://login.coremode.ai/">Sign in</a>
+          <a class="button button--small" href="signup.html">Sign up</a>
+        </div>
+        <details class="nav__mobile">
+          <summary class="button button--quiet button--small">Menu</summary>
+          <nav class="nav__sheet" aria-label="Site, compact"><div><p class="menu__label">Align</p><a class="footer__link" href="platform.html#objectives">Objectives</a><a class="footer__link" href="platform.html#knowledge">Knowledge</a></div><div><p class="menu__label">See</p><a class="footer__link" href="platform.html#focus">Focus</a><a class="footer__link" href="platform.html#signals">Signals</a><a class="footer__link" href="platform.html#perspective">Perspective</a></div><div><p class="menu__label">Act</p><a class="footer__link" href="integrations.html#actions">Actions</a><a class="footer__link" href="integrations.html">Integrations</a></div><div><p class="menu__label">Roles</p><a class="footer__link" href="solutions.html#leaders">Leaders</a><a class="footer__link" href="solutions.html#managers">Managers</a><a class="footer__link" href="solutions.html#everyone">Everyone</a></div><div><p class="menu__label">Needs</p><a class="footer__link" href="solutions.html#alignment">Alignment</a><a class="footer__link" href="solutions.html#decisions">Decisions</a><a class="footer__link" href="solutions.html#follow-through">Follow-through</a></div><div><p class="menu__label">Help</p><a class="footer__link" href="resources.html#demo">Request a demo</a><a class="footer__link" href="resources.html#support">Support</a></div><div><p class="menu__label">Learn</p><a class="footer__link" href="resources.html#how">How it works</a><a class="footer__link" href="resources.html#guides">Guides <span class="tag">Soon</span></a><a class="footer__link" href="resources.html#developers">Developers <span class="tag">Soon</span></a></div><div><p class="menu__label">Trust</p><a class="footer__link" href="privacy.html">Privacy</a></div><div><p class="menu__label">More</p><a class="footer__link" href="enterprise.html">Enterprise</a><a class="footer__link" href="pricing.html">Pricing</a><a class="footer__link" href="https://login.coremode.ai/">Sign in</a><a class="footer__link" href="signup.html">Sign up</a></div></nav>
+        </details>
+      </div>
     </header>
 
-    <main>
-      <section class="page-head">
-        <h1>Built so that it cannot become surveillance</h1>
-        <p class="lede">
-          A system that reads a company's work could become a way of watching people. Ours is built so it can't: by structure, not by a setting.
-        </p>
+    <main class="wrap">
+<section class="hero">
+        <div>
+          <h1>Built so it cannot become surveillance.</h1>
+          <p class="lede">By structure, not by a setting.</p>
+        </div>
       </section>
 
-      <section class="engine">
-        <div class="engine__head">
-          <img src="assets/mark.svg" alt="" width="56" height="56" />
-          <div>
-            <p class="engine__name">Three kinds of knowledge</p>
-            <h2>Knowledge flows to you, never up from you</h2>
-          </div>
+      <section class="section">
+        <div class="section__head">
+          <h2>Knowledge flows to you, never up from you</h2>
+          <p class="lede">What is shared can inform what is yours. Never the reverse.</p>
         </div>
-        <p class="lede">
-          What is shared can inform what is yours. What is yours never informs what is shared.
-        </p>
-        <div class="modes">
-          <article class="mode">
+        <div class="grid grid--3">
+          <div class="cell">
+            <p class="cell__sub">Shared with everyone</p>
             <h3>Your organization</h3>
-            <p class="pillar__role">Shared with everyone in the company</p>
-            <p>
-              Company goals, who reports to whom, announcements, and work done
-              in shared channels and tools that everyone can already see.
-            </p>
-          </article>
-          <article class="mode">
+            <p>Company goals, reporting lines, and work in shared channels.</p>
+          </div>
+          <div class="cell">
+            <p class="cell__sub">Members only</p>
             <h3>A private space</h3>
-            <p class="pillar__role">Shared with its members only</p>
-            <p>
-              A leadership group, a hiring loop, a deal. Only its members can
-              see what is in it. To everyone else, it does not exist: no name,
-              no member list, no count.
-            </p>
-          </article>
-          <article class="mode">
+            <p>A leadership group, a hiring loop, a deal. To everyone else, it does not exist.</p>
+          </div>
+          <div class="cell">
+            <p class="cell__sub">Yours alone</p>
             <h3>You</h3>
-            <p class="pillar__role">Yours alone</p>
-            <p>
-              Your email, your direct messages, your notes, and your personal
-              objectives. They shape what coremode shows you and no one else.
-            </p>
-          </article>
+            <p>Your email, direct messages, and notes. They shape what you see, and no one else's.</p>
+          </div>
         </div>
       </section>
 
-      <section class="how how--first" id="promises">
-        <h2>What that means in practice</h2>
-        <dl class="promises">
-          <div>
-            <dt>What is private stays private</dt>
-            <dd>
-              Your email, your direct messages, and your notes inform only what
-              coremode shows you. They never reach your manager, your company's
-              administrators, or anyone else.
-            </dd>
+      <section class="section" id="promises">
+        <div class="section__head">
+          <h2>In practice</h2>
+        </div>
+        <div class="grid grid--3">
+          <div class="cell">
+            <h3>Seniority opens nothing</h3>
+            <p>A chief executive sees a private space only as a member.</p>
           </div>
-          <div>
-            <dt>Seniority opens nothing</dt>
-            <dd>
-              A chief executive or an administrator sees a private space only
-              if they are a member of it. Otherwise they cannot tell that it
-              exists.
-            </dd>
+          <div class="cell">
+            <h3>Code decides access</h3>
+            <p>Ordinary, tested code. A model is never asked who may see what.</p>
           </div>
-          <div>
-            <dt>The system decides access, not the model</dt>
-            <dd>
-              Who may see what is enforced by ordinary, tested code. An AI
-              model is never asked whether to show something to someone.
-            </dd>
+          <div class="cell">
+            <h3>Access ends at once</h3>
+            <p>Leave a space or the company, and what you saw through it is gone.</p>
           </div>
-          <div>
-            <dt>Everything traces to its source</dt>
-            <dd>
-              Each thing coremode tells you links to the messages and documents
-              behind it, in the tools they came from, so you can check it.
-            </dd>
+          <div class="cell">
+            <h3>Summaries stay private</h3>
+            <p>A count built from private material is as private as the material.</p>
           </div>
-          <div>
-            <dt>What you conclude stays as private as what you read</dt>
-            <dd>
-              A summary, a count, or a signal built from private material is
-              exactly as private as that material. Turning something into a
-              number does not make it shareable.
-            </dd>
+          <div class="cell">
+            <h3>Everything has a source</h3>
+            <p>What coremode tells you links to the messages and documents behind it.</p>
           </div>
-          <div>
-            <dt>Losing access takes effect at once</dt>
-            <dd>
-              When someone leaves a space or the company, what they could see
-              because of it stops being shown to them straight away, not at
-              the next scheduled update.
-            </dd>
+          <div class="cell">
+            <h3>No scores</h3>
+            <p>No rankings or activity counts for individual people. coremode does not produce them.</p>
           </div>
-        </dl>
+        </div>
       </section>
 
-      <section class="how">
-        <h2>What your employer can and cannot see</h2>
-        <p class="lede">
-          coremode is there to support the people doing the work. It is not a
-          tool for measuring them.
-        </p>
-        <div class="compare">
-          <article class="mode">
+      <section class="section">
+        <div class="section__head">
+          <h2>What your employer sees</h2>
+          <p class="lede">coremode supports people. It does not measure them.</p>
+        </div>
+        <div class="grid grid--2">
+          <div class="cell">
             <h3>Can see</h3>
-            <ul class="plain">
-              <li>Company goals and the progress toward them</li>
-              <li>Who is in the company and who reports to whom</li>
-              <li>What happens in shared channels and tools, as they already can</li>
-              <li>The private spaces they are themselves a member of</li>
+            <ul class="list">
+              <li>Company goals and progress toward them</li>
+              <li>Who is in the company, and who reports to whom</li>
+              <li>Shared channels and tools, as they already can</li>
+              <li>Private spaces they are a member of</li>
             </ul>
-          </article>
-          <article class="mode">
+          </div>
+          <div class="cell">
             <h3>Cannot see</h3>
-            <ul class="plain plain--no">
+            <ul class="list list--no">
               <li>Your email, direct messages, or notes</li>
-              <li>What coremode shows you in your Focus or Perspective</li>
-              <li>Private spaces they are not a member of, or that those exist</li>
-              <li>Scores, rankings, or activity counts for individual people; coremode does not produce them</li>
+              <li>Your Focus or your Perspective</li>
+              <li>Private spaces they are not in, or that those exist</li>
+              <li>Scores for individual people</li>
             </ul>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section class="how">
-        <h2>What we do with your company's data</h2>
-        <dl class="promises">
-          <div>
-            <dt>It is used to run coremode for you</dt>
-            <dd>
-              Your company's data produces your company's signals. One
-              company's data is never used for another's.
-            </dd>
+      <section class="section" id="data">
+        <div class="section__head">
+          <h2>Your company's data</h2>
+        </div>
+        <div class="grid grid--4">
+          <div class="cell">
+            <h3>Yours only</h3>
+            <p>Your data produces your signals. Never another company's.</p>
           </div>
-          <div>
-            <dt>It does not train shared models</dt>
-            <dd>
-              We do not train models on your data to benefit other customers.
-              If that ever becomes worth offering, it will be something you
-              choose, not something you find out about.
-            </dd>
+          <div class="cell">
+            <h3>No shared training</h3>
+            <p>We do not train models on your data for other customers.</p>
           </div>
-          <div>
-            <dt>Our own staff are kept out of the content</dt>
-            <dd>
-              The tools we use to run the service manage accounts, not what is
-              in them.
-            </dd>
+          <div class="cell">
+            <h3>Staff stay out</h3>
+            <p>Our tools manage accounts, not what is in them.</p>
           </div>
-          <div>
-            <dt>The same on every plan</dt>
-            <dd>
-              These protections are not a paid extra. They are the same on
-              Starter, Business, and Enterprise.
-            </dd>
+          <div class="cell">
+            <h3>Every plan</h3>
+            <p>The same protections on Starter, Business, and Enterprise.</p>
           </div>
-        </dl>
-        <p class="fine">
-          coremode is in early development. This is how it is designed; ask us what is in place today. A formal privacy policy comes before general availability.
-        </p>
+        </div>
+        <p class="note">coremode is in early development. This is the design; ask us what is in place today. A formal privacy policy comes before general availability.</p>
       </section>
 
-      <section class="demo" id="demo">
-        <h2>See it with your own company's work</h2>
-        <p class="lede">
-          Half an hour. We show you the product and what connecting your tools involves.
-        </p>
-        <a class="button" href="mailto:support@coremodehq.com?subject=Demo%20request">
-          Request a demo
-        </a>
-        <p class="fine">Opens an email to support@coremodehq.com.</p>
+      <section class="cta" id="demo">
+        <div>
+          <h2>See it with your own work.</h2>
+          <p>Half an hour. The product, and what connecting your tools involves.</p>
+        </div>
+        <div class="cta__action">
+          <a class="button" href="mailto:support@coremodehq.com?subject=Demo%20request">Request a demo</a>
+          <p class="note">Opens an email to support@coremodehq.com.</p>
+        </div>
       </section>
     </main>
 
-    <footer class="foot">
-      <div class="brand">
-        <img src="assets/mark.svg" alt="" width="28" height="28" />
-        <span class="wordmark">coremode</span>
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__grid">
+          <div>
+            <a class="brand" href="index.html" aria-label="coremode home">
+              <img src="assets/mark.svg" alt="" width="24" height="24" />coremode
+            </a>
+          </div>
+          <div><p class="menu__label">Platform</p><a class="footer__link" href="platform.html#objectives">Objectives</a><a class="footer__link" href="platform.html#knowledge">Knowledge</a><a class="footer__link" href="platform.html#focus">Focus</a><a class="footer__link" href="platform.html#signals">Signals</a><a class="footer__link" href="platform.html#perspective">Perspective</a><a class="footer__link" href="integrations.html#actions">Actions</a><a class="footer__link" href="integrations.html">Integrations</a></div><div><p class="menu__label">Solutions</p><a class="footer__link" href="solutions.html#leaders">Leaders</a><a class="footer__link" href="solutions.html#managers">Managers</a><a class="footer__link" href="solutions.html#everyone">Everyone</a><a class="footer__link" href="solutions.html#alignment">Alignment</a><a class="footer__link" href="solutions.html#decisions">Decisions</a><a class="footer__link" href="solutions.html#follow-through">Follow-through</a></div><div><p class="menu__label">Resources</p><a class="footer__link" href="resources.html#demo">Request a demo</a><a class="footer__link" href="resources.html#support">Support</a><a class="footer__link" href="resources.html#how">How it works</a><a class="footer__link" href="resources.html#guides">Guides <span class="tag">Soon</span></a><a class="footer__link" href="resources.html#developers">Developers <span class="tag">Soon</span></a><a class="footer__link" href="privacy.html">Privacy</a></div><div><p class="menu__label">Company</p><a class="footer__link" href="enterprise.html">Enterprise</a><a class="footer__link" href="pricing.html">Pricing</a><a class="footer__link" href="signup.html">Sign up</a><a class="footer__link" href="https://login.coremode.ai/">Sign in</a></div>
+        </div>
+        <p class="note">No cookies. Nothing loaded from anyone else.</p>
       </div>
-      <nav class="foot__nav" aria-label="Footer">
-        <a href="how.html">How it works</a>
-        <a href="integrations.html">Integrations</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
-      <p>This site sets no cookies and loads nothing from anyone else.</p>
     </footer>
   </body>
 </html>

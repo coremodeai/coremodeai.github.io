@@ -1,245 +1,185 @@
 <!doctype html>
-<html lang="en">
+<!-- Built by build.py from src/pages/integrations.html. Edit the source, not this file. -->
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark" />
-    <title>coremode integrations</title>
-    <meta
-      name="description"
-      content="The tools coremode connects to, what it reads from each, what it can do in them, and when it asks a person first."
-    />
+    <title>coremode integrations: it works in the tools you already use</title>
+    <meta name="description" content="The tools coremode connects to, what it reads, what it can do in them, and when it asks you first." />
     <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/tokens.css" />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
-    <header class="top">
-      <a class="brand" href="index.html" aria-label="coremode home">
-        <img src="assets/mark.svg" alt="" width="36" height="36" />
-        <span class="wordmark">coremode</span>
-      </a>
-      <nav class="top__nav" aria-label="Site">
-        <a href="how.html">How it works</a>
-        <a href="integrations.html" aria-current="page">Integrations</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="https://login.coremode.ai/">Sign in</a>
-        <a class="button" href="signup.html">Sign up</a>
-      </nav>
+    <header class="nav">
+      <div class="nav__bar wrap">
+        <a class="brand" href="index.html" aria-label="coremode home">
+          <img src="assets/mark.svg" alt="" width="24" height="24" />coremode
+        </a>
+        <nav class="nav__links" aria-label="Site"><div class="nav__item"><a class="nav__link" href="platform.html" aria-current="true">Platform <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 3.5 3 3 3-3"/></svg></a><div class="menu"><div class="menu__inner wrap"><div><p class="menu__label">Align</p><a class="menu__link" href="platform.html#objectives">Objectives</a><a class="menu__link" href="platform.html#knowledge">Knowledge</a></div><div><p class="menu__label">See</p><a class="menu__link" href="platform.html#focus">Focus</a><a class="menu__link" href="platform.html#signals">Signals</a><a class="menu__link" href="platform.html#perspective">Perspective</a></div><div><p class="menu__label">Act</p><a class="menu__link" href="integrations.html#actions">Actions</a><a class="menu__link" href="integrations.html">Integrations</a></div></div></div></div><div class="nav__item"><a class="nav__link" href="solutions.html">Solutions <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 3.5 3 3 3-3"/></svg></a><div class="menu"><div class="menu__inner wrap"><div><p class="menu__label">Roles</p><a class="menu__link" href="solutions.html#leaders">Leaders</a><a class="menu__link" href="solutions.html#managers">Managers</a><a class="menu__link" href="solutions.html#everyone">Everyone</a></div><div><p class="menu__label">Needs</p><a class="menu__link" href="solutions.html#alignment">Alignment</a><a class="menu__link" href="solutions.html#decisions">Decisions</a><a class="menu__link" href="solutions.html#follow-through">Follow-through</a></div></div></div></div><div class="nav__item"><a class="nav__link" href="resources.html">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 3.5 3 3 3-3"/></svg></a><div class="menu"><div class="menu__inner wrap"><div><p class="menu__label">Help</p><a class="menu__link" href="resources.html#demo">Request a demo</a><a class="menu__link" href="resources.html#support">Support</a></div><div><p class="menu__label">Learn</p><a class="menu__link" href="resources.html#how">How it works</a><a class="menu__link" href="resources.html#guides">Guides <span class="tag">Soon</span></a><a class="menu__link" href="resources.html#developers">Developers <span class="tag">Soon</span></a></div><div><p class="menu__label">Trust</p><a class="menu__link" href="privacy.html">Privacy</a></div></div></div></div><a class="nav__link" href="enterprise.html">Enterprise</a><a class="nav__link" href="pricing.html">Pricing</a></nav>
+        <div class="nav__auth">
+          <a class="nav__link" href="https://login.coremode.ai/">Sign in</a>
+          <a class="button button--small" href="signup.html">Sign up</a>
+        </div>
+        <details class="nav__mobile">
+          <summary class="button button--quiet button--small">Menu</summary>
+          <nav class="nav__sheet" aria-label="Site, compact"><div><p class="menu__label">Align</p><a class="footer__link" href="platform.html#objectives">Objectives</a><a class="footer__link" href="platform.html#knowledge">Knowledge</a></div><div><p class="menu__label">See</p><a class="footer__link" href="platform.html#focus">Focus</a><a class="footer__link" href="platform.html#signals">Signals</a><a class="footer__link" href="platform.html#perspective">Perspective</a></div><div><p class="menu__label">Act</p><a class="footer__link" href="integrations.html#actions">Actions</a><a class="footer__link" href="integrations.html">Integrations</a></div><div><p class="menu__label">Roles</p><a class="footer__link" href="solutions.html#leaders">Leaders</a><a class="footer__link" href="solutions.html#managers">Managers</a><a class="footer__link" href="solutions.html#everyone">Everyone</a></div><div><p class="menu__label">Needs</p><a class="footer__link" href="solutions.html#alignment">Alignment</a><a class="footer__link" href="solutions.html#decisions">Decisions</a><a class="footer__link" href="solutions.html#follow-through">Follow-through</a></div><div><p class="menu__label">Help</p><a class="footer__link" href="resources.html#demo">Request a demo</a><a class="footer__link" href="resources.html#support">Support</a></div><div><p class="menu__label">Learn</p><a class="footer__link" href="resources.html#how">How it works</a><a class="footer__link" href="resources.html#guides">Guides <span class="tag">Soon</span></a><a class="footer__link" href="resources.html#developers">Developers <span class="tag">Soon</span></a></div><div><p class="menu__label">Trust</p><a class="footer__link" href="privacy.html">Privacy</a></div><div><p class="menu__label">More</p><a class="footer__link" href="enterprise.html">Enterprise</a><a class="footer__link" href="pricing.html">Pricing</a><a class="footer__link" href="https://login.coremode.ai/">Sign in</a><a class="footer__link" href="signup.html">Sign up</a></div></nav>
+        </details>
+      </div>
     </header>
 
-    <main>
-      <section class="page-head">
-        <h1>Integrations</h1>
-        <p class="lede">
-          The engine reads the tools your company already uses, and acts in them.
-        </p>
-      </section>
-
-      <section class="engine">
-        <div class="engine__head">
-          <img src="assets/mark.svg" alt="" width="56" height="56" />
-          <div>
-            <p class="engine__name">Who is driving</p>
-            <h2>You decide how much it does by itself</h2>
-          </div>
-        </div>
-        <p class="lede">
-          Reading is automatic. Acting is not: you choose how each kind of action is handled.
-        </p>
-
-        <div class="modes">
-          <article class="mode">
-            <h3>It prepares, you approve</h3>
-            <p class="pillar__role">How everything starts</p>
-            <p>
-              The engine drafts the email, fills in the issue, or lines up the
-              message, and puts it in your Focus. Nothing leaves until you
-              press the button.
-            </p>
-          </article>
-          <article class="mode">
-            <h3>It acts within rules you set</h3>
-            <p class="pillar__role">When you trust a kind of action</p>
-            <p>
-              For actions you have seen it get right, you can let it go ahead:
-              create the issue, post the routine update. You hear about it as
-              a signal afterward, and can turn the rule off at any time.
-            </p>
-          </article>
-          <article class="mode">
-            <h3>It always asks</h3>
-            <p class="pillar__role">Whatever the rules say</p>
-            <p>
-              Anything that reaches people outside your company, changes who
-              has access to something, or cannot be undone waits for a person,
-              every time.
-            </p>
-          </article>
+    <main class="wrap">
+<section class="hero">
+        <div>
+          <h1>Works in the tools you already use.</h1>
+          <p class="lede">coremode reads them. It acts in them when you approve.</p>
         </div>
       </section>
 
-      <section class="how how--first">
-        <h2>What keeps an action safe</h2>
-        <dl class="promises">
-          <div>
-            <dt>Only actions on a fixed list</dt>
-            <dd>
-              The engine can do what is in its catalog of actions and nothing
-              else. An AI model never invents a new kind of action.
-            </dd>
-          </div>
-          <div>
-            <dt>Never more than you could do yourself</dt>
-            <dd>
-              An action runs with the permissions of the person who approved
-              it or whose rule allowed it. Ordinary code checks that, not a
-              model.
-            </dd>
-          </div>
-          <div>
-            <dt>Checked afterward</dt>
-            <dd>
-              After acting, the engine confirms the result in the other tool
-              and updates what it knows. If it did not work, you are told.
-            </dd>
-          </div>
-          <div>
-            <dt>On the record</dt>
-            <dd>
-              Every action is recorded: what was done, in which tool, on whose
-              approval or under which rule.
-            </dd>
-          </div>
-        </dl>
-      </section>
-
-      <section class="how">
-        <h2>The tools</h2>
-        <p class="lede">
-          Where each connection stands today.
-        </p>
-        <div class="tools">
-          <article class="tool">
-            <div class="tool__head">
-              <h3>Google Workspace</h3>
-              <span class="status status--now">Building now</span>
-            </div>
+      <section class="section">
+        <div class="section__head">
+          <h2>The tools</h2>
+          <p class="lede">Where each connection stands.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="cell">
+            <div class="cell__head"><h3>Google Workspace</h3><span class="tag tag--good">Building now</span></div>
             <dl>
-              <dt>Reads</dt><dd>Your directory of people and who reports to whom; email, calendar, and documents.</dd>
-              <dt>Does</dt><dd>Sends an email you approved; shares a document.</dd>
+              <dt>Reads</dt><dd>People, email, calendar, and documents.</dd>
+              <dt>Does</dt><dd>Sends an email. Shares a document.</dd>
             </dl>
           </article>
-          <article class="tool">
-            <div class="tool__head">
-              <h3>Slack</h3>
-              <span class="status status--now">Building now</span>
-            </div>
+          <article class="cell">
+            <div class="cell__head"><h3>Slack</h3><span class="tag tag--good">Building now</span></div>
             <dl>
-              <dt>Reads</dt><dd>Workspace members, channels, and messages.</dd>
-              <dt>Does</dt><dd>Posts a message; creates a channel.</dd>
+              <dt>Reads</dt><dd>Members, channels, and messages.</dd>
+              <dt>Does</dt><dd>Posts a message. Creates a channel.</dd>
             </dl>
           </article>
-          <article class="tool">
-            <div class="tool__head">
-              <h3>Linear</h3>
-              <span class="status status--now">Building now</span>
-            </div>
+          <article class="cell">
+            <div class="cell__head"><h3>Linear</h3><span class="tag tag--good">Building now</span></div>
             <dl>
-              <dt>Reads</dt><dd>Teams, projects, issues, and their status.</dd>
+              <dt>Reads</dt><dd>Teams, projects, and issues.</dd>
               <dt>Does</dt><dd>Creates a team or an issue.</dd>
             </dl>
           </article>
-          <article class="tool">
-            <div class="tool__head">
-              <h3>Okta</h3>
-              <span class="status status--next">Next</span>
-            </div>
+          <article class="cell">
+            <div class="cell__head"><h3>Okta</h3><span class="tag">Next</span></div>
             <dl>
-              <dt>Reads</dt><dd>Sign-in for your people, accounts, and groups.</dd>
-              <dt>Does</dt><dd>Removes access to coremode the moment someone leaves.</dd>
+              <dt>Reads</dt><dd>Sign-in, accounts, and groups.</dd>
+              <dt>Does</dt><dd>Removes access the moment someone leaves.</dd>
             </dl>
           </article>
-          <article class="tool">
-            <div class="tool__head">
-              <h3>Workday</h3>
-              <span class="status status--next">Next</span>
-            </div>
+          <article class="cell">
+            <div class="cell__head"><h3>Workday</h3><span class="tag">Next</span></div>
             <dl>
-              <dt>Reads</dt><dd>Employees, departments, and reporting lines, as the authority on your structure.</dd>
-              
+              <dt>Reads</dt><dd>Employees, departments, and reporting lines.</dd>
             </dl>
           </article>
-          <article class="tool">
-            <div class="tool__head">
-              <h3>Microsoft 365 and Teams</h3>
-              <span class="status status--later">Later</span>
-            </div>
+          <article class="cell">
+            <div class="cell__head"><h3>Microsoft 365 and Teams</h3><span class="tag">Later</span></div>
             <dl>
               <dt>Reads</dt><dd>Directory, email, calendar, documents, and chat.</dd>
               <dt>Does</dt><dd>Sends email and messages.</dd>
             </dl>
           </article>
-          <article class="tool">
-            <div class="tool__head">
-              <h3>Jira and Confluence</h3>
-              <span class="status status--later">Later</span>
-            </div>
+          <article class="cell">
+            <div class="cell__head"><h3>Jira and Confluence</h3><span class="tag">Later</span></div>
             <dl>
               <dt>Reads</dt><dd>Issues, projects, and pages.</dd>
               <dt>Does</dt><dd>Creates issues.</dd>
             </dl>
           </article>
-          <article class="tool">
-            <div class="tool__head">
-              <h3>GitHub</h3>
-              <span class="status status--later">Later</span>
-            </div>
+          <article class="cell">
+            <div class="cell__head"><h3>GitHub</h3><span class="tag">Later</span></div>
             <dl>
               <dt>Reads</dt><dd>Repositories, pull requests, and reviews.</dd>
               <dt>Does</dt><dd>Opens issues.</dd>
             </dl>
           </article>
-          <article class="tool">
-            <div class="tool__head">
-              <h3>Salesforce</h3>
-              <span class="status status--later">Later</span>
-            </div>
+          <article class="cell">
+            <div class="cell__head"><h3>Salesforce</h3><span class="tag">Later</span></div>
             <dl>
-              <dt>Reads</dt><dd>Accounts, opportunities, and their stages.</dd>
+              <dt>Reads</dt><dd>Accounts, opportunities, and stages.</dd>
               <dt>Does</dt><dd>Updates a record.</dd>
             </dl>
           </article>
         </div>
-        <p class="fine">
-          Need one that isn't here? Tell us in a demo.
-        </p>
+        <p class="note">Need one that isn't here? Tell us in a demo.</p>
       </section>
 
-      <section class="demo" id="demo">
-        <h2>See it with your own company's work</h2>
-        <p class="lede">
-          Half an hour. We show you the product and what connecting your tools involves.
-        </p>
-        <a class="button" href="mailto:support@coremodehq.com?subject=Demo%20request">
-          Request a demo
-        </a>
-        <p class="fine">Opens an email to support@coremodehq.com.</p>
+      <section class="section" id="actions">
+        <div class="section__head">
+          <h2>You decide how much it does</h2>
+          <p class="lede">Reading is automatic. Acting is not.</p>
+        </div>
+        <div class="grid grid--3">
+          <div class="cell">
+            <p class="cell__sub">How everything starts</p>
+            <h3>You approve</h3>
+            <p>It drafts the email or the issue. Nothing leaves until you press the button.</p>
+          </div>
+          <div class="cell">
+            <p class="cell__sub">When you trust a kind of action</p>
+            <h3>It follows your rules</h3>
+            <p>Let routine actions go ahead. You hear about each one. Turn a rule off any time.</p>
+          </div>
+          <div class="cell">
+            <p class="cell__sub">Whatever the rules say</p>
+            <h3>It always asks</h3>
+            <p>Anything that leaves the company, changes access, or can't be undone waits for a person.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__head">
+          <h2>Safe by construction</h2>
+        </div>
+        <div class="grid grid--4">
+          <div class="cell">
+            <h3>A fixed list</h3>
+            <p>It does only what is in its catalog. A model never invents an action.</p>
+          </div>
+          <div class="cell">
+            <h3>Your permissions</h3>
+            <p>An action runs as the person who approved it. Never with more.</p>
+          </div>
+          <div class="cell">
+            <h3>Checked afterward</h3>
+            <p>It confirms the result. If it failed, you are told.</p>
+          </div>
+          <div class="cell">
+            <h3>On the record</h3>
+            <p>What was done, where, and on whose approval.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" id="demo">
+        <div>
+          <h2>See it with your own work.</h2>
+          <p>Half an hour. The product, and what connecting your tools involves.</p>
+        </div>
+        <div class="cta__action">
+          <a class="button" href="mailto:support@coremodehq.com?subject=Demo%20request">Request a demo</a>
+          <p class="note">Opens an email to support@coremodehq.com.</p>
+        </div>
       </section>
     </main>
 
-    <footer class="foot">
-      <div class="brand">
-        <img src="assets/mark.svg" alt="" width="28" height="28" />
-        <span class="wordmark">coremode</span>
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__grid">
+          <div>
+            <a class="brand" href="index.html" aria-label="coremode home">
+              <img src="assets/mark.svg" alt="" width="24" height="24" />coremode
+            </a>
+          </div>
+          <div><p class="menu__label">Platform</p><a class="footer__link" href="platform.html#objectives">Objectives</a><a class="footer__link" href="platform.html#knowledge">Knowledge</a><a class="footer__link" href="platform.html#focus">Focus</a><a class="footer__link" href="platform.html#signals">Signals</a><a class="footer__link" href="platform.html#perspective">Perspective</a><a class="footer__link" href="integrations.html#actions">Actions</a><a class="footer__link" href="integrations.html">Integrations</a></div><div><p class="menu__label">Solutions</p><a class="footer__link" href="solutions.html#leaders">Leaders</a><a class="footer__link" href="solutions.html#managers">Managers</a><a class="footer__link" href="solutions.html#everyone">Everyone</a><a class="footer__link" href="solutions.html#alignment">Alignment</a><a class="footer__link" href="solutions.html#decisions">Decisions</a><a class="footer__link" href="solutions.html#follow-through">Follow-through</a></div><div><p class="menu__label">Resources</p><a class="footer__link" href="resources.html#demo">Request a demo</a><a class="footer__link" href="resources.html#support">Support</a><a class="footer__link" href="resources.html#how">How it works</a><a class="footer__link" href="resources.html#guides">Guides <span class="tag">Soon</span></a><a class="footer__link" href="resources.html#developers">Developers <span class="tag">Soon</span></a><a class="footer__link" href="privacy.html">Privacy</a></div><div><p class="menu__label">Company</p><a class="footer__link" href="enterprise.html">Enterprise</a><a class="footer__link" href="pricing.html">Pricing</a><a class="footer__link" href="signup.html">Sign up</a><a class="footer__link" href="https://login.coremode.ai/">Sign in</a></div>
+        </div>
+        <p class="note">No cookies. Nothing loaded from anyone else.</p>
       </div>
-      <nav class="foot__nav" aria-label="Footer">
-        <a href="how.html">How it works</a>
-        <a href="integrations.html">Integrations</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
-      <p>This site sets no cookies and loads nothing from anyone else.</p>
     </footer>
   </body>
 </html>

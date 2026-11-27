@@ -1,139 +1,167 @@
 <!doctype html>
-<html lang="en">
+<!-- Built by build.py from src/pages/pricing.html. Edit the source, not this file. -->
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark" />
-    <title>coremode pricing</title>
-    <meta
-      name="description"
-      content="Planned pricing for coremode: Starter, Business, and Enterprise. Every plan has the same privacy protections."
-    />
+    <title>coremode pricing: Starter, Business, and Enterprise</title>
+    <meta name="description" content="Per person. Starter from $9 and Business from $49 a month, billed yearly. The same privacy on every plan." />
     <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/tokens.css" />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
-    <header class="top">
-      <a class="brand" href="index.html" aria-label="coremode home">
-        <img src="assets/mark.svg" alt="" width="36" height="36" />
-        <span class="wordmark">coremode</span>
-      </a>
-      <nav class="top__nav" aria-label="Site">
-        <a href="how.html">How it works</a>
-        <a href="integrations.html">Integrations</a>
-        <a href="pricing.html" aria-current="page">Pricing</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="https://login.coremode.ai/">Sign in</a>
-        <a class="button" href="signup.html">Sign up</a>
-      </nav>
+    <header class="nav">
+      <div class="nav__bar wrap">
+        <a class="brand" href="index.html" aria-label="coremode home">
+          <img src="assets/mark.svg" alt="" width="24" height="24" />coremode
+        </a>
+        <nav class="nav__links" aria-label="Site"><div class="nav__item"><a class="nav__link" href="platform.html">Platform <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 3.5 3 3 3-3"/></svg></a><div class="menu"><div class="menu__inner wrap"><div><p class="menu__label">Align</p><a class="menu__link" href="platform.html#objectives">Objectives</a><a class="menu__link" href="platform.html#knowledge">Knowledge</a></div><div><p class="menu__label">See</p><a class="menu__link" href="platform.html#focus">Focus</a><a class="menu__link" href="platform.html#signals">Signals</a><a class="menu__link" href="platform.html#perspective">Perspective</a></div><div><p class="menu__label">Act</p><a class="menu__link" href="integrations.html#actions">Actions</a><a class="menu__link" href="integrations.html">Integrations</a></div></div></div></div><div class="nav__item"><a class="nav__link" href="solutions.html">Solutions <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 3.5 3 3 3-3"/></svg></a><div class="menu"><div class="menu__inner wrap"><div><p class="menu__label">Roles</p><a class="menu__link" href="solutions.html#leaders">Leaders</a><a class="menu__link" href="solutions.html#managers">Managers</a><a class="menu__link" href="solutions.html#everyone">Everyone</a></div><div><p class="menu__label">Needs</p><a class="menu__link" href="solutions.html#alignment">Alignment</a><a class="menu__link" href="solutions.html#decisions">Decisions</a><a class="menu__link" href="solutions.html#follow-through">Follow-through</a></div></div></div></div><div class="nav__item"><a class="nav__link" href="resources.html">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 3.5 3 3 3-3"/></svg></a><div class="menu"><div class="menu__inner wrap"><div><p class="menu__label">Help</p><a class="menu__link" href="resources.html#demo">Request a demo</a><a class="menu__link" href="resources.html#support">Support</a></div><div><p class="menu__label">Learn</p><a class="menu__link" href="resources.html#how">How it works</a><a class="menu__link" href="resources.html#guides">Guides <span class="tag">Soon</span></a><a class="menu__link" href="resources.html#developers">Developers <span class="tag">Soon</span></a></div><div><p class="menu__label">Trust</p><a class="menu__link" href="privacy.html">Privacy</a></div></div></div></div><a class="nav__link" href="enterprise.html">Enterprise</a><a class="nav__link" href="pricing.html" aria-current="page">Pricing</a></nav>
+        <div class="nav__auth">
+          <a class="nav__link" href="https://login.coremode.ai/">Sign in</a>
+          <a class="button button--small" href="signup.html">Sign up</a>
+        </div>
+        <details class="nav__mobile">
+          <summary class="button button--quiet button--small">Menu</summary>
+          <nav class="nav__sheet" aria-label="Site, compact"><div><p class="menu__label">Align</p><a class="footer__link" href="platform.html#objectives">Objectives</a><a class="footer__link" href="platform.html#knowledge">Knowledge</a></div><div><p class="menu__label">See</p><a class="footer__link" href="platform.html#focus">Focus</a><a class="footer__link" href="platform.html#signals">Signals</a><a class="footer__link" href="platform.html#perspective">Perspective</a></div><div><p class="menu__label">Act</p><a class="footer__link" href="integrations.html#actions">Actions</a><a class="footer__link" href="integrations.html">Integrations</a></div><div><p class="menu__label">Roles</p><a class="footer__link" href="solutions.html#leaders">Leaders</a><a class="footer__link" href="solutions.html#managers">Managers</a><a class="footer__link" href="solutions.html#everyone">Everyone</a></div><div><p class="menu__label">Needs</p><a class="footer__link" href="solutions.html#alignment">Alignment</a><a class="footer__link" href="solutions.html#decisions">Decisions</a><a class="footer__link" href="solutions.html#follow-through">Follow-through</a></div><div><p class="menu__label">Help</p><a class="footer__link" href="resources.html#demo">Request a demo</a><a class="footer__link" href="resources.html#support">Support</a></div><div><p class="menu__label">Learn</p><a class="footer__link" href="resources.html#how">How it works</a><a class="footer__link" href="resources.html#guides">Guides <span class="tag">Soon</span></a><a class="footer__link" href="resources.html#developers">Developers <span class="tag">Soon</span></a></div><div><p class="menu__label">Trust</p><a class="footer__link" href="privacy.html">Privacy</a></div><div><p class="menu__label">More</p><a class="footer__link" href="enterprise.html">Enterprise</a><a class="footer__link" href="pricing.html">Pricing</a><a class="footer__link" href="https://login.coremode.ai/">Sign in</a><a class="footer__link" href="signup.html">Sign up</a></div></nav>
+        </details>
+      </div>
     </header>
 
-    <main>
-      <section class="page-head">
-        <h1>Pricing</h1>
-        <p class="lede">
-          Per person, per month. The same privacy protections on every plan.
-        </p>
-        <p class="fine">
-          Planned launch prices. Design partners agree terms with us directly.
-        </p>
+    <main class="wrap">
+<section class="hero hero--end">
+        <div>
+          <h1>One price per person.</h1>
+          <p class="lede">The same privacy on every plan.</p>
+        </div>
+        <div class="hero__aside">
+          <fieldset class="segmented">
+            <legend class="sr-only">Billing</legend>
+            <label><input type="radio" name="billing" value="yearly" checked /><span>Yearly</span></label>
+            <label><input type="radio" name="billing" value="monthly" /><span>Monthly</span></label>
+          </fieldset>
+          <p class="note">Yearly saves up to 18%.</p>
+        </div>
       </section>
 
-      <section class="plans" aria-label="Plans">
-        <article class="plan">
-          <h2>Starter</h2>
-          <p class="plan__for">For a small team getting started.</p>
-          <p class="plan__price"><span>$9</span> per person, per month</p>
-          <ul>
-            <li>Up to 10 people</li>
-            <li>Focus, Signals, and Perspective for everyone</li>
-            <li>Google Workspace and Slack</li>
-            <li>A personal space for each person, and 2 private spaces</li>
-            <li>Actions run only when you approve them</li>
-            <li>Set up by yourself, without a call</li>
-          </ul>
-          <a class="button button--quiet plan__cta" href="https://login.coremode.ai/create?plan=starter">Select plan</a>
-        </article>
+      <section class="section" aria-label="Plans">
+        <div class="grid grid--3">
+          <article class="cell plan">
+            <div class="plan__head">
+              <h2>Starter</h2>
+              <p>A small team getting started</p>
+            </div>
+            <div class="plan__price">
+              <p class="price"><span class="price__amount when-yearly">$9</span><span class="price__amount when-monthly">$11</span> per person, per month</p>
+              <p class="note when-yearly">Billed yearly</p>
+              <p class="note when-monthly">Billed monthly</p>
+            </div>
+            <ul class="list">
+              <li>Up to 10 people</li>
+              <li>Focus, Signals, and Perspective</li>
+              <li>Google Workspace and Slack</li>
+              <li>2 private spaces</li>
+              <li>You approve every action</li>
+              <li>Set up without a call</li>
+            </ul>
+            <a class="button button--quiet button--block" href="https://login.coremode.ai/create?plan=starter">Start with Starter</a>
+          </article>
 
-        <article class="plan plan--main">
-          <h2>Business</h2>
-          <p class="plan__for">For a company coordinating across teams.</p>
-          <p class="plan__price"><span>$49</span> per person, per month</p>
-          <ul>
-            <li>Up to 50 people</li>
-            <li>Everything in Starter, with 10 private spaces</li>
-            <li>Objectives that run from company goals down to each person</li>
-            <li>Alignment across teams</li>
-            <li>More connections, including Linear and your HR system</li>
-            <li>Sign-in through your identity provider</li>
-            <li>Actions that run by themselves under rules you set</li>
-          </ul>
-          <a class="button plan__cta" href="https://login.coremode.ai/create?plan=business">Select plan</a>
-        </article>
+          <article class="cell plan">
+            <div class="plan__head">
+              <h2>Business</h2>
+              <p>A company coordinating across teams</p>
+            </div>
+            <div class="plan__price">
+              <p class="price"><span class="price__amount when-yearly">$49</span><span class="price__amount when-monthly">$59</span> per person, per month</p>
+              <p class="note when-yearly">Billed yearly</p>
+              <p class="note when-monthly">Billed monthly</p>
+            </div>
+            <ul class="list">
+              <li>Up to 50 people</li>
+              <li>Everything in Starter</li>
+              <li>10 private spaces</li>
+              <li>Objectives from company to person</li>
+              <li>Alignment across teams</li>
+              <li>Linear and your HR system</li>
+              <li>Single sign-on</li>
+              <li>Actions under rules you set</li>
+            </ul>
+            <a class="button button--block" href="https://login.coremode.ai/create?plan=business">Start with Business</a>
+          </article>
 
-        <article class="plan">
-          <h2>Enterprise</h2>
-          <p class="plan__for">For security, compliance, and procurement requirements.</p>
-          <p class="plan__price"><span>Let's talk</span></p>
-          <ul>
-            <li>More than 50 people</li>
-            <li>Everything in Business</li>
-            <li>Automatic account provisioning and removal</li>
-            <li>Dedicated infrastructure, if you need it</li>
-            <li>Audit records and retention controls</li>
-            <li>Custom connections</li>
-            <li>Agreed support and service levels</li>
-          </ul>
-          <a class="button button--quiet plan__cta" href="mailto:support@coremodehq.com?subject=Enterprise%20plan">Talk to us</a>
-        </article>
+          <article class="cell plan">
+            <div class="plan__head">
+              <h2>Enterprise</h2>
+              <p>Security, compliance, and procurement</p>
+            </div>
+            <div class="plan__price">
+              <p class="price"><span class="price__amount">Custom</span></p>
+              <p class="note">Agreed with you</p>
+            </div>
+            <ul class="list">
+              <li>More than 50 people</li>
+              <li>Everything in Business</li>
+              <li>Automatic provisioning</li>
+              <li>Dedicated infrastructure</li>
+              <li>Audit and retention controls</li>
+              <li>Custom connections</li>
+              <li>Agreed service levels</li>
+            </ul>
+            <a class="button button--quiet button--block" href="enterprise.html">Talk to us</a>
+          </article>
+        </div>
+        <p class="note">Planned launch prices. Design partners agree terms with us directly.</p>
       </section>
 
-      <section class="how">
-        <h2>Questions people ask</h2>
-        <dl class="promises">
-          <div>
-            <dt>Who counts as a person?</dt>
-            <dd>Anyone with a seat. You don't pay for everyone in your directory.</dd>
+      <section class="section">
+        <div class="section__head">
+          <h2>Questions</h2>
+        </div>
+        <div class="grid grid--2">
+          <div class="cell">
+            <h3>Who counts as a person?</h3>
+            <p>Anyone with a seat. Not everyone in your directory.</p>
           </div>
-          <div>
-            <dt>Is privacy different between plans?</dt>
-            <dd>No. Private email and messages stay private, and seniority opens nothing, on every plan.</dd>
+          <div class="cell">
+            <h3>Is privacy different between plans?</h3>
+            <p>No. Private stays private on every plan.</p>
           </div>
-          <div>
-            <dt>Can we start small and move up?</dt>
-            <dd>Yes. Moving up keeps everything coremode has learned.</dd>
+          <div class="cell">
+            <h3>Can we start small and move up?</h3>
+            <p>Yes. Everything coremode has learned comes with you.</p>
           </div>
-          <div>
-            <dt>Can we use it today?</dt>
-            <dd>You can <a class="link" href="signup.html">reserve your company's address</a> today. We're opening a few companies at a time, starting with design partners.</dd>
+          <div class="cell">
+            <h3>Can we use it today?</h3>
+            <p><a class="link" href="signup.html">Reserve your address</a> today. We open a few companies at a time.</p>
           </div>
-        </dl>
+        </div>
       </section>
 
-      <section class="demo" id="demo">
-        <h2>See it with your own company's work</h2>
-        <p class="lede">
-          Half an hour. We show you the product and what connecting your tools involves.
-        </p>
-        <a class="button" href="mailto:support@coremodehq.com?subject=Demo%20request">
-          Request a demo
-        </a>
-        <p class="fine">Opens an email to support@coremodehq.com.</p>
+      <section class="cta" id="demo">
+        <div>
+          <h2>See it with your own work.</h2>
+          <p>Half an hour. The product, and what connecting your tools involves.</p>
+        </div>
+        <div class="cta__action">
+          <a class="button" href="mailto:support@coremodehq.com?subject=Demo%20request">Request a demo</a>
+          <p class="note">Opens an email to support@coremodehq.com.</p>
+        </div>
       </section>
     </main>
 
-    <footer class="foot">
-      <div class="brand">
-        <img src="assets/mark.svg" alt="" width="28" height="28" />
-        <span class="wordmark">coremode</span>
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__grid">
+          <div>
+            <a class="brand" href="index.html" aria-label="coremode home">
+              <img src="assets/mark.svg" alt="" width="24" height="24" />coremode
+            </a>
+          </div>
+          <div><p class="menu__label">Platform</p><a class="footer__link" href="platform.html#objectives">Objectives</a><a class="footer__link" href="platform.html#knowledge">Knowledge</a><a class="footer__link" href="platform.html#focus">Focus</a><a class="footer__link" href="platform.html#signals">Signals</a><a class="footer__link" href="platform.html#perspective">Perspective</a><a class="footer__link" href="integrations.html#actions">Actions</a><a class="footer__link" href="integrations.html">Integrations</a></div><div><p class="menu__label">Solutions</p><a class="footer__link" href="solutions.html#leaders">Leaders</a><a class="footer__link" href="solutions.html#managers">Managers</a><a class="footer__link" href="solutions.html#everyone">Everyone</a><a class="footer__link" href="solutions.html#alignment">Alignment</a><a class="footer__link" href="solutions.html#decisions">Decisions</a><a class="footer__link" href="solutions.html#follow-through">Follow-through</a></div><div><p class="menu__label">Resources</p><a class="footer__link" href="resources.html#demo">Request a demo</a><a class="footer__link" href="resources.html#support">Support</a><a class="footer__link" href="resources.html#how">How it works</a><a class="footer__link" href="resources.html#guides">Guides <span class="tag">Soon</span></a><a class="footer__link" href="resources.html#developers">Developers <span class="tag">Soon</span></a><a class="footer__link" href="privacy.html">Privacy</a></div><div><p class="menu__label">Company</p><a class="footer__link" href="enterprise.html">Enterprise</a><a class="footer__link" href="pricing.html">Pricing</a><a class="footer__link" href="signup.html">Sign up</a><a class="footer__link" href="https://login.coremode.ai/">Sign in</a></div>
+        </div>
+        <p class="note">No cookies. Nothing loaded from anyone else.</p>
       </div>
-      <nav class="foot__nav" aria-label="Footer">
-        <a href="how.html">How it works</a>
-        <a href="integrations.html">Integrations</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
-      <p>This site sets no cookies and loads nothing from anyone else.</p>
     </footer>
   </body>
 </html>

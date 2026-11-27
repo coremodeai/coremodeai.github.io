@@ -1,165 +1,171 @@
 <!doctype html>
-<html lang="en">
+<!-- Built by build.py from src/pages/index.html. Edit the source, not this file. -->
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark" />
-    <title>coremode: The Self-Driving AI Platform, ready for business</title>
-    <meta
-      name="description"
-      content="The self-driving AI platform, ready for business. You set the destination; coremode keeps the work moving across your tools and hands you the wheel only when a decision is yours."
-    />
+    <title>coremode: the self-driving AI platform, ready for business</title>
+    <meta name="description" content="You set the destination. coremode keeps work moving across your tools and comes to you only when a decision is yours." />
     <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
-    <link rel="preload" href="assets/fonts/MrDafoe-Regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="assets/tokens.css" />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
-    <header class="top">
-      <a class="brand" href="index.html" aria-label="coremode home">
-        <img src="assets/mark.svg" alt="" width="36" height="36" />
-        <span class="wordmark">coremode</span>
-      </a>
-      <nav class="top__nav" aria-label="Site">
-        <a href="how.html">How it works</a>
-        <a href="integrations.html">Integrations</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="https://login.coremode.ai/">Sign in</a>
-        <a class="button" href="signup.html">Sign up</a>
-      </nav>
+    <header class="nav">
+      <div class="nav__bar wrap">
+        <a class="brand" href="index.html" aria-label="coremode home">
+          <img src="assets/mark.svg" alt="" width="24" height="24" />coremode
+        </a>
+        <nav class="nav__links" aria-label="Site"><div class="nav__item"><a class="nav__link" href="platform.html">Platform <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 3.5 3 3 3-3"/></svg></a><div class="menu"><div class="menu__inner wrap"><div><p class="menu__label">Align</p><a class="menu__link" href="platform.html#objectives">Objectives</a><a class="menu__link" href="platform.html#knowledge">Knowledge</a></div><div><p class="menu__label">See</p><a class="menu__link" href="platform.html#focus">Focus</a><a class="menu__link" href="platform.html#signals">Signals</a><a class="menu__link" href="platform.html#perspective">Perspective</a></div><div><p class="menu__label">Act</p><a class="menu__link" href="integrations.html#actions">Actions</a><a class="menu__link" href="integrations.html">Integrations</a></div></div></div></div><div class="nav__item"><a class="nav__link" href="solutions.html">Solutions <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 3.5 3 3 3-3"/></svg></a><div class="menu"><div class="menu__inner wrap"><div><p class="menu__label">Roles</p><a class="menu__link" href="solutions.html#leaders">Leaders</a><a class="menu__link" href="solutions.html#managers">Managers</a><a class="menu__link" href="solutions.html#everyone">Everyone</a></div><div><p class="menu__label">Needs</p><a class="menu__link" href="solutions.html#alignment">Alignment</a><a class="menu__link" href="solutions.html#decisions">Decisions</a><a class="menu__link" href="solutions.html#follow-through">Follow-through</a></div></div></div></div><div class="nav__item"><a class="nav__link" href="resources.html">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m2 3.5 3 3 3-3"/></svg></a><div class="menu"><div class="menu__inner wrap"><div><p class="menu__label">Help</p><a class="menu__link" href="resources.html#demo">Request a demo</a><a class="menu__link" href="resources.html#support">Support</a></div><div><p class="menu__label">Learn</p><a class="menu__link" href="resources.html#how">How it works</a><a class="menu__link" href="resources.html#guides">Guides <span class="tag">Soon</span></a><a class="menu__link" href="resources.html#developers">Developers <span class="tag">Soon</span></a></div><div><p class="menu__label">Trust</p><a class="menu__link" href="privacy.html">Privacy</a></div></div></div></div><a class="nav__link" href="enterprise.html">Enterprise</a><a class="nav__link" href="pricing.html">Pricing</a></nav>
+        <div class="nav__auth">
+          <a class="nav__link" href="https://login.coremode.ai/">Sign in</a>
+          <a class="button button--small" href="signup.html">Sign up</a>
+        </div>
+        <details class="nav__mobile">
+          <summary class="button button--quiet button--small">Menu</summary>
+          <nav class="nav__sheet" aria-label="Site, compact"><div><p class="menu__label">Align</p><a class="footer__link" href="platform.html#objectives">Objectives</a><a class="footer__link" href="platform.html#knowledge">Knowledge</a></div><div><p class="menu__label">See</p><a class="footer__link" href="platform.html#focus">Focus</a><a class="footer__link" href="platform.html#signals">Signals</a><a class="footer__link" href="platform.html#perspective">Perspective</a></div><div><p class="menu__label">Act</p><a class="footer__link" href="integrations.html#actions">Actions</a><a class="footer__link" href="integrations.html">Integrations</a></div><div><p class="menu__label">Roles</p><a class="footer__link" href="solutions.html#leaders">Leaders</a><a class="footer__link" href="solutions.html#managers">Managers</a><a class="footer__link" href="solutions.html#everyone">Everyone</a></div><div><p class="menu__label">Needs</p><a class="footer__link" href="solutions.html#alignment">Alignment</a><a class="footer__link" href="solutions.html#decisions">Decisions</a><a class="footer__link" href="solutions.html#follow-through">Follow-through</a></div><div><p class="menu__label">Help</p><a class="footer__link" href="resources.html#demo">Request a demo</a><a class="footer__link" href="resources.html#support">Support</a></div><div><p class="menu__label">Learn</p><a class="footer__link" href="resources.html#how">How it works</a><a class="footer__link" href="resources.html#guides">Guides <span class="tag">Soon</span></a><a class="footer__link" href="resources.html#developers">Developers <span class="tag">Soon</span></a></div><div><p class="menu__label">Trust</p><a class="footer__link" href="privacy.html">Privacy</a></div><div><p class="menu__label">More</p><a class="footer__link" href="enterprise.html">Enterprise</a><a class="footer__link" href="pricing.html">Pricing</a><a class="footer__link" href="https://login.coremode.ai/">Sign in</a><a class="footer__link" href="signup.html">Sign up</a></div></nav>
+        </details>
+      </div>
     </header>
 
-    <main>
-      <!-- Hero: the claim on the left, the product itself on the right. -->
-      <section class="hero">
-        <svg class="hero__wave" viewBox="0 0 900 220" preserveAspectRatio="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="wave-stroke" x1="0" x2="1" y1="0" y2="0">
-              <stop offset="0" stop-color="#3f6df0" stop-opacity="0" />
-              <stop offset="0.3" stop-color="#4f7bf5" />
-              <stop offset="0.65" stop-color="#9a7dfb" />
-              <stop offset="0.85" stop-color="#d58bfb" />
-              <stop offset="1" stop-color="#b678f6" stop-opacity="0.2" />
-            </linearGradient>
-            <linearGradient id="wave-fill" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0" stop-color="#7c69f3" stop-opacity="0.3" />
-              <stop offset="1" stop-color="#7c69f3" stop-opacity="0" />
-            </linearGradient>
-            <filter id="wave-glow" x="-10%" y="-80%" width="120%" height="260%">
-              <feGaussianBlur stdDeviation="9" />
-            </filter>
-          </defs>
-          <path d="M0 178 C 220 182, 330 168, 470 104 S 700 18, 900 70 L 900 220 L 0 220 Z" fill="url(#wave-fill)" />
-          <path d="M0 178 C 220 182, 330 168, 470 104 S 700 18, 900 70" fill="none" stroke="url(#wave-stroke)" stroke-width="10" filter="url(#wave-glow)" opacity="0.9" />
-          <path d="M0 178 C 220 182, 330 168, 470 104 S 700 18, 900 70" fill="none" stroke="url(#wave-stroke)" stroke-width="2.5" stroke-linecap="round" />
-        </svg>
-
-        <div class="hero__copy">
-          <h1>
-            <span class="line">The Self-Driving</span>
-            <span class="line">AI Platform <span class="script">ready for business</span></span>
-          </h1>
-          <p class="lede">
-            You set the destination. coremode keeps the work moving across
-            your company's tools, and hands you the wheel only when a decision
-            is yours.
-          </p>
-          <div class="hero__actions">
-            <a class="button" href="signup.html">Choose your address</a>
+    <main class="wrap">
+<section class="hero hero--center">
+        <div>
+          <h1>The self-driving AI platform, ready for business.</h1>
+          <p class="lede">You set the destination. coremode keeps work moving, and comes to you only when a decision is yours.</p>
+          <div class="actions">
+            <a class="button" href="signup.html">Sign up</a>
             <a class="link" href="#demo">Request a demo</a>
           </div>
-          <p class="fine">In early development with a small group of companies.</p>
+          <p class="note">In early development with a small group of companies.</p>
         </div>
+      </section>
 
-        <!-- A rendering of the app's home screen, in plain HTML. -->
-        <div class="screen home" role="img" aria-label="The coremode home screen: five things need you, one already late, and the three that need you first.">
-          <p class="home__title">Your organization, in motion.</p>
-          <p class="home__line">5 things need you, 1 already late. Everything else is moving.</p>
-
-          <div class="tiles">
-            <div class="tile"><span class="tile__name">Focus</span><span class="tile__n">5</span><span class="tile__note tile__note--late">1 late</span></div>
-            <div class="tile"><span class="tile__name">Signals</span><span class="tile__n">4</span><span class="tile__note">worth knowing</span></div>
-            <div class="tile"><span class="tile__name">Objectives</span><span class="tile__n">3</span><span class="tile__note tile__note--good">1 on track</span></div>
-            <div class="tile"><span class="tile__name">Organization</span><span class="tile__n">14</span><span class="tile__note">people</span></div>
+      <div class="showcase drift">
+        <div class="mock" role="img" aria-label="The coremode home screen: five things need you, one already late, and the three that need you first.">
+          <p class="mock__title">Your organization, in motion.</p>
+          <p class="mock__line">5 things need you, 1 already late. Everything else is moving.</p>
+          <div class="stats">
+            <div class="stat"><span class="stat__name">Focus</span><span class="stat__n">5</span><span class="stat__note tone-late">1 late</span></div>
+            <div class="stat"><span class="stat__name">Signals</span><span class="stat__n">4</span><span class="stat__note">worth knowing</span></div>
+            <div class="stat"><span class="stat__name">Objectives</span><span class="stat__n">3</span><span class="stat__note tone-good">1 on track</span></div>
+            <div class="stat"><span class="stat__name">Organization</span><span class="stat__n">14</span><span class="stat__note">people</span></div>
           </div>
+          <p class="mock__label">Needs you first</p>
+          <div class="entry">
+            <p class="entry__title">Answer the customer's security questionnaire</p>
+            <div class="entry__meta"><span class="tag">Action</span><span class="tag tag--late">2 days late</span></div>
+          </div>
+          <div class="entry">
+            <p class="entry__title">Choose the scope of the first pilot</p>
+            <div class="entry__meta"><span class="tag">Decision</span><span class="tag">Needed today</span></div>
+          </div>
+          <div class="entry">
+            <p class="entry__title">Sales and Engineering expect different start dates</p>
+            <div class="entry__meta"><span class="tag">Alignment</span><span class="tag">Needed today</span></div>
+          </div>
+        </div>
+      </div>
 
-          <div class="first">
-            <p class="first__label">Needs you first</p>
-            <p class="first__row"><strong>Answer the customer's security questionnaire</strong><span><span class="kind kind--action">Action</span> <span class="due due--late">2 days late</span></span></p>
-            <p class="first__row"><strong>Choose the scope of the first pilot</strong><span><span class="kind kind--decision">Decision</span> <span class="due">Needed today</span></span></p>
-            <p class="first__row"><strong>Sales and Engineering expect different start dates</strong><span><span class="kind kind--alignment">Alignment</span> <span class="due">Needed today</span></span></p>
+      <section class="chapter">
+        <div class="chapter__body">
+          <p class="eyebrow">Objectives</p>
+          <h2>You set the destination.</h2>
+          <p class="lede">Say where the company is going. Everyone's work lines up behind it.</p>
+        </div>
+      </section>
+
+      <section class="chapter">
+        <div class="chapter__body">
+          <p class="eyebrow">Knowledge</p>
+          <h2>It keeps the picture current.</h2>
+          <p class="lede">It reads the tools you already use. Nobody writes a status update.</p>
+        </div>
+      </section>
+
+      <section class="chapter">
+        <div class="chapter__body">
+          <p class="eyebrow">Signals</p>
+          <h2>It comes to you when it's yours.</h2>
+          <p class="lede">A decision. An approval. Two teams expecting different things. Nothing else.</p>
+        </div>
+      </section>
+
+      <section class="chapter">
+        <div class="chapter__body">
+          <p class="eyebrow">Actions</p>
+          <h2>Then it does the work.</h2>
+          <p class="lede">It drafts the email and files the issue. Nothing leaves until you approve.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__head">
+          <h2>What changes</h2>
+        </div>
+        <div class="grid grid--3">
+          <div class="cell cell--tall">
+            <svg class="cell__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 20.5 8 12 12.5 3.5 8z"/><path d="m3.5 12 8.5 4.5 8.5-4.5M3.5 16l8.5 4.5 8.5-4.5"/></svg>
+            <h3>No status updates</h3>
+            <p>The picture stays current by itself.</p>
+          </div>
+          <div class="cell cell--tall">
+            <svg class="cell__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h3.5l2.5-6.5 4.5 13 2.5-6.5H21"/></svg>
+            <h3>Nothing dropped</h3>
+            <p>Commitments are followed from the message they were made in.</p>
+          </div>
+          <div class="cell cell--tall">
+            <svg class="cell__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="m14.5 9.5 5-5M16.5 4.5h3v3"/></svg>
+            <h3>Teams stay aligned</h3>
+            <p>Mismatches surface early, to the people involved.</p>
           </div>
         </div>
       </section>
 
-      <!-- The one idea, in three parts. The detail is on How it works. -->
-      <section class="engine" id="engine">
-        <div class="engine__head">
-          <img src="assets/mark.svg" alt="" width="56" height="56" />
-          <div>
-            <p class="engine__name">The Coremode Engine</p>
-            <h2>It works without being asked</h2>
-          </div>
+      <section class="section">
+        <div class="section__head">
+          <h2>Built for trust</h2>
         </div>
-
-        <ol class="pillars">
-          <li>
-            <h3>Objectives</h3>
-            <p class="pillar__role">The destination</p>
-            <p>You say where the company is going.</p>
-          </li>
-          <li>
-            <h3>Knowledge</h3>
-            <p class="pillar__role">The map</p>
-            <p>It reads your tools and keeps the picture current.</p>
-          </li>
-          <li>
-            <h3>Signals</h3>
-            <p class="pillar__role">The moment you are needed</p>
-            <p>It comes to you only when something is yours.</p>
-          </li>
-        </ol>
+        <div class="grid grid--3">
+          <a class="cell cell--link" href="privacy.html">
+            <h3>Private by design</h3>
+            <p>Your email and messages inform only you. Seniority opens nothing.</p>
+          </a>
+          <a class="cell cell--link" href="integrations.html">
+            <h3>Works in your tools</h3>
+            <p>Google Workspace and Slack first. More on the way.</p>
+          </a>
+          <a class="cell cell--link" href="integrations.html#actions">
+            <h3>You stay in control</h3>
+            <p>It acts only on your approval, or under rules you set.</p>
+          </a>
+        </div>
       </section>
 
-      <section class="ways" aria-label="More about coremode">
-        <a class="way" href="how.html">
-          <h3>How it works</h3>
-          <p>Focus, Signals, and Perspective, and what happens to a message.</p>
-        </a>
-        <a class="way" href="privacy.html">
-          <h3>Private by design</h3>
-          <p>Your email and messages inform only you. Seniority opens nothing.</p>
-        </a>
-        <a class="way" href="integrations.html">
-          <h3>Works in your tools</h3>
-          <p>It reads Google Workspace and Slack, and acts there when you approve.</p>
-        </a>
-      </section>
-
-      <section class="demo" id="demo">
-        <h2>See it with your own company's work</h2>
-        <p class="lede">
-          Half an hour. We show you the product and what connecting your tools involves.
-        </p>
-        <a class="button" href="mailto:support@coremodehq.com?subject=Demo%20request">
-          Request a demo
-        </a>
-        <p class="fine">Opens an email to support@coremodehq.com.</p>
+      <section class="cta" id="demo">
+        <div>
+          <h2>See it with your own work.</h2>
+          <p>Half an hour. The product, and what connecting your tools involves.</p>
+        </div>
+        <div class="cta__action">
+          <a class="button" href="mailto:support@coremodehq.com?subject=Demo%20request">Request a demo</a>
+          <p class="note">Opens an email to support@coremodehq.com.</p>
+        </div>
       </section>
     </main>
 
-    <footer class="foot">
-      <div class="brand">
-        <img src="assets/mark.svg" alt="" width="28" height="28" />
-        <span class="wordmark">coremode</span>
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__grid">
+          <div>
+            <a class="brand" href="index.html" aria-label="coremode home">
+              <img src="assets/mark.svg" alt="" width="24" height="24" />coremode
+            </a>
+          </div>
+          <div><p class="menu__label">Platform</p><a class="footer__link" href="platform.html#objectives">Objectives</a><a class="footer__link" href="platform.html#knowledge">Knowledge</a><a class="footer__link" href="platform.html#focus">Focus</a><a class="footer__link" href="platform.html#signals">Signals</a><a class="footer__link" href="platform.html#perspective">Perspective</a><a class="footer__link" href="integrations.html#actions">Actions</a><a class="footer__link" href="integrations.html">Integrations</a></div><div><p class="menu__label">Solutions</p><a class="footer__link" href="solutions.html#leaders">Leaders</a><a class="footer__link" href="solutions.html#managers">Managers</a><a class="footer__link" href="solutions.html#everyone">Everyone</a><a class="footer__link" href="solutions.html#alignment">Alignment</a><a class="footer__link" href="solutions.html#decisions">Decisions</a><a class="footer__link" href="solutions.html#follow-through">Follow-through</a></div><div><p class="menu__label">Resources</p><a class="footer__link" href="resources.html#demo">Request a demo</a><a class="footer__link" href="resources.html#support">Support</a><a class="footer__link" href="resources.html#how">How it works</a><a class="footer__link" href="resources.html#guides">Guides <span class="tag">Soon</span></a><a class="footer__link" href="resources.html#developers">Developers <span class="tag">Soon</span></a><a class="footer__link" href="privacy.html">Privacy</a></div><div><p class="menu__label">Company</p><a class="footer__link" href="enterprise.html">Enterprise</a><a class="footer__link" href="pricing.html">Pricing</a><a class="footer__link" href="signup.html">Sign up</a><a class="footer__link" href="https://login.coremode.ai/">Sign in</a></div>
+        </div>
+        <p class="note">No cookies. Nothing loaded from anyone else.</p>
       </div>
-      <nav class="foot__nav" aria-label="Footer">
-        <a href="how.html">How it works</a>
-        <a href="integrations.html">Integrations</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
-      <p>This site sets no cookies and loads nothing from anyone else.</p>
     </footer>
   </body>
 </html>
