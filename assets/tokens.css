@@ -6,43 +6,50 @@
 
 :root {
   /* 1. Primitives */
-  --gray-0: #ffffff;
-  --gray-50: #f6f7f9;
-  --gray-100: #e6e8ee;
-  --gray-200: #cfd3dd;
-  --gray-300: #b4b8c6;
-  --gray-400: #80859a;
-  --gray-500: #6b7083;
-  --gray-600: #4b5063;
-  --gray-700: #343a4d;
-  --gray-800: #22263a;
-  --gray-850: #161925;
-  --gray-900: #0e1018;
-  --gray-950: #08090e;
-  --gold-300: #ffd978;
+  --ink-0: #ffffff;
+  --ink-50: #f6f6fc;
+  --ink-100: #ececf7;
+  --ink-150: #e3e4f2;
+  --ink-200: #cdd0e6;
+  --ink-250: #f5f6fc;
+  --ink-300: #cdd0e0;
+  --ink-400: #979bb3;
+  --ink-500: #666a85;
+  --ink-600: #474b66;
+  --ink-700: #303452;
+  --ink-800: #1f2239;
+  --ink-850: #171a35;
+  --ink-900: #101329;
+  --ink-950: #0a0c1c;
+  --violet-300: #c6bdfd;
+  --violet-400: #9585f8;
+  --violet-500: #7c69f3;
+  --violet-600: #6a54f0;
+  --violet-700: #5a45e0;
   --gold-400: #ffc94a;
-  --gold-700: #8a6200;
-  --gold-900: #1c1503;
-  --green-400: #6fdca4;
-  --green-700: #157f4a;
-  --red-400: #ff8fa3;
-  --red-700: #c2264b;
+  --amber-400: #f6c47c;
+  --amber-700: #8a6200;
+  --mint-400: #7fe0ae;
+  --mint-700: #157f4a;
+  --rose-400: #f79aa8;
+  --rose-700: #c2264b;
 
   /* 2. Semantic: dark, the default */
   color-scheme: dark;
-  --color-bg: var(--gray-950);
-  --color-surface: var(--gray-900);
-  --color-surface-raised: var(--gray-850);
-  --color-border: var(--gray-800);
-  --color-border-strong: var(--gray-700);
-  --color-text: var(--gray-0);
-  --color-text-2: var(--gray-300);
-  --color-text-3: var(--gray-400);
-  --color-accent: var(--gold-400);
-  --color-accent-hover: var(--gold-300);
-  --color-on-accent: var(--gold-900);
-  --color-good: var(--green-400);
-  --color-late: var(--red-400);
+  --color-bg: var(--ink-950);
+  --color-surface: var(--ink-900);
+  --color-surface-raised: var(--ink-850);
+  --color-border: var(--ink-800);
+  --color-border-strong: var(--ink-700);
+  --color-text: var(--ink-250);
+  --color-text-2: var(--ink-300);
+  --color-text-3: var(--ink-400);
+  --color-accent: var(--violet-600);
+  --color-accent-hover: var(--violet-500);
+  --color-on-accent: var(--ink-0);
+  --color-accent-text: var(--violet-300);
+  --color-good: var(--mint-400);
+  --color-late: var(--rose-400);
 
   /* 3. Scales */
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -79,17 +86,18 @@
 /* Light theme: set data-theme="light" on <html>. */
 [data-theme="light"] {
   color-scheme: light;
-  --color-bg: var(--gray-0);
-  --color-surface: var(--gray-50);
-  --color-surface-raised: var(--gray-100);
-  --color-border: var(--gray-100);
-  --color-border-strong: var(--gray-200);
-  --color-text: var(--gray-950);
-  --color-text-2: var(--gray-600);
-  --color-text-3: var(--gray-500);
-  --color-accent: var(--gold-400);
-  --color-accent-hover: var(--gold-300);
-  --color-on-accent: var(--gold-900);
-  --color-good: var(--green-700);
-  --color-late: var(--red-700);
+  --color-bg: var(--ink-0);
+  --color-surface: var(--ink-50);
+  --color-surface-raised: var(--ink-100);
+  --color-border: var(--ink-150);
+  --color-border-strong: var(--ink-200);
+  --color-text: var(--ink-950);
+  --color-text-2: var(--ink-600);
+  --color-text-3: var(--ink-500);
+  --color-accent: var(--violet-600);
+  --color-accent-hover: var(--violet-500);
+  --color-on-accent: var(--ink-0);
+  --color-accent-text: var(--violet-700);
+  --color-good: var(--mint-700);
+  --color-late: var(--rose-700);
 }
