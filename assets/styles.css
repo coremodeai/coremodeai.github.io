@@ -102,21 +102,28 @@ h3 { font-size: var(--text-m); font-weight: var(--weight-medium); }
 .nav__link:hover, .nav__link[aria-current], .nav__item:hover .nav__link, .nav__item:focus-within .nav__link { color: var(--color-text); }
 .nav__auth { display: flex; align-items: center; gap: var(--space-4); margin-left: auto; }
 
-.menu {
-  display: none;
-  position: absolute; left: 0; right: 0; top: 100%;
-  padding-block: var(--space-4) var(--space-7);
-  background: var(--color-bg); border-bottom: 1px solid var(--color-border);
-}
+/* The menu: two columns of destinations with a line each, and a column of
+   plain links. Hairlines between columns. */
+.menu { display: none; position: absolute; left: 0; right: 0; top: 100%; }
 .nav__item:hover .menu, .nav__item:focus-within .menu { display: block; }
-.menu__inner { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); }
-.menu__label { font-size: var(--text-s); color: var(--color-text-3); margin-bottom: var(--space-2); }
-.menu__link {
-  display: flex; align-items: center; gap: var(--space-2);
-  padding-block: var(--space-1);
-  font-size: var(--text-l); color: var(--color-text); text-decoration: none;
+.menu__panel {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-l);
+  overflow: hidden;
 }
-.menu__link:hover { color: var(--color-text-2); }
+.menu__col { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-3); border-right: 1px solid var(--color-border); margin-right: -1px; }
+.menu__label { font-size: var(--text-s); color: var(--color-text-3); margin-bottom: var(--space-2); }
+.menu__feature, .menu__link {
+  padding: var(--space-3) var(--space-4); border-radius: var(--radius-m);
+  font-size: var(--text-s); text-decoration: none;
+}
+.menu__feature { display: flex; flex-direction: column; gap: var(--space-1); }
+.menu__feature:hover, .menu__link:hover { background: var(--color-surface-raised); }
+.menu__title { display: flex; align-items: center; gap: var(--space-2); font-weight: var(--weight-medium); color: var(--color-text); }
+.menu__line { max-width: 26ch; color: var(--color-text-3); }
+.menu__feature:hover .menu__line { color: var(--color-text-2); }
+.menu__link { display: flex; align-items: center; gap: var(--space-2); font-weight: var(--weight-medium); color: var(--color-text-2); }
+.menu__link:hover { color: var(--color-text); }
 
 .nav__mobile { display: none; margin-left: auto; }
 .nav__mobile summary { list-style: none; }

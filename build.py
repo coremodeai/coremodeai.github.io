@@ -16,26 +16,34 @@ ROOT = pathlib.Path(__file__).parent
 SRC = ROOT / "src"
 
 # ---- navigation: the one place the menus are defined ------------------------
-# (label, href) or (label, href, tag)
+# A menu has features (title, line, href[, tag]) and plain links (label, href).
 NAV = [
-    {"label": "Platform", "href": "platform.html", "groups": [
-        ("Align", [("Objectives", "platform.html#objectives"), ("Knowledge", "platform.html#knowledge")]),
-        ("See", [("Focus", "platform.html#focus"), ("Signals", "platform.html#signals"),
-                 ("Perspective", "platform.html#perspective")]),
-        ("Act", [("Actions", "integrations.html#actions"), ("Integrations", "integrations.html")]),
-    ]},
-    {"label": "Solutions", "href": "solutions.html", "groups": [
-        ("Roles", [("Leaders", "solutions.html#leaders"), ("Managers", "solutions.html#managers"),
-                   ("Everyone", "solutions.html#everyone")]),
-        ("Needs", [("Alignment", "solutions.html#alignment"), ("Decisions", "solutions.html#decisions"),
-                   ("Follow-through", "solutions.html#follow-through")]),
-    ]},
-    {"label": "Resources", "href": "resources.html", "groups": [
-        ("Help", [("Request a demo", "resources.html#demo"), ("Support", "resources.html#support")]),
-        ("Learn", [("How it works", "resources.html#how"), ("Guides", "resources.html#guides", "Soon"),
-                   ("Developers", "resources.html#developers", "Soon")]),
-        ("Trust", [("Privacy", "privacy.html")]),
-    ]},
+    {"label": "Platform", "href": "platform.html",
+     "features": [
+         ("Objectives", "Goals that connect the company to each person", "platform.html#objectives"),
+         ("Focus", "What needs you now, and what comes next", "platform.html#focus"),
+         ("Signals", "What changed, with the evidence behind it", "platform.html#signals"),
+         ("Perspective", "Where you stand, written for you", "platform.html#perspective"),
+     ],
+     "links": [("Integrations", "integrations.html"), ("Actions", "integrations.html#actions"),
+               ("Knowledge", "platform.html#knowledge"), ("Privacy", "privacy.html")]},
+    {"label": "Solutions", "href": "solutions.html",
+     "features": [
+         ("Leaders", "See the company move without asking for reports", "solutions.html#leaders"),
+         ("Managers", "Know what is stuck before the meeting", "solutions.html#managers"),
+         ("Everyone", "Start the day knowing what matters", "solutions.html#everyone"),
+     ],
+     "links": [("Alignment", "solutions.html#alignment"), ("Decisions", "solutions.html#decisions"),
+               ("Follow-through", "solutions.html#follow-through")]},
+    {"label": "Resources", "href": "resources.html",
+     "features": [
+         ("How it works", "From your tools to your day, in three steps", "resources.html#how"),
+         ("Request a demo", "See it with a company shaped like yours", "resources.html#demo"),
+         ("Guides", "Set up, connect, and get value fast", "resources.html#guides", "Soon"),
+         ("Developers", "Build on the coremode platform", "resources.html#developers", "Soon"),
+     ],
+     "links": [("Support", "resources.html#support"), ("Privacy", "privacy.html"),
+               ("Enterprise", "enterprise.html"), ("Pricing", "pricing.html")]},
     {"label": "Enterprise", "href": "enterprise.html"},
     {"label": "Pricing", "href": "pricing.html"},
 ]
@@ -72,12 +80,31 @@ def menu_link(item, cls):
     return f'<a class="{cls}" href="{href}">{label}{tag}</a>'
 
 
-def groups_html(groups, link_cls):
-    out = []
-    for name, items in groups:
-        links = "".join(menu_link(i, link_cls) for i in items)
-        out.append(f'<div><p class="menu__label">{name}</p>{links}</div>')
-    return "".join(out)
+def flat(top):
+    """Every destination in a menu, as (label, href[, tag])."""
+    features = [(f[0], f[2]) + tuple(f[3:]) for f in top["features"]]
+    return features + [l for l in top["links"] if l[1] not in {f[1] for f in features}]
+
+
+def feature(item):
+    title, line, href = item[0], item[1], item[2]
+    tag = f' <span class="tag">{item[3]}</span>' if len(item) > 3 else ""
+    return (f'<a class="menu__feature" href="{href}"><span class="menu__title">{title}{tag}</span>'
+            f'<span class="menu__line">{line}</span></a>')
+
+
+def menu_html(top):
+    features = top["features"]
+    half = (len(features) + 1) // 2
+    cols = [features[:half], features[half:]]
+    out = "".join(f'<div class="menu__col">{"".join(feature(f) for f in col)}</div>' for col in cols)
+    links = "".join(menu_link(l, "menu__link") for l in top["links"])
+    return f'<div class="menu"><div class="wrap"><div class="menu__panel">{out}<div class="menu__col">{links}</div></div></div></div>'
+
+
+def group_html(top, link_cls):
+    links = "".join(menu_link(i, link_cls) for i in flat(top))
+    return f'<div><p class="menu__label">{top["label"]}</p>{links}</div>'
 
 
 def header(page):
@@ -86,21 +113,20 @@ def header(page):
         current = ""
         if top["href"] == page:
             current = ' aria-current="page"'
-        elif any(i[1].split("#")[0] == page for _, items in top.get("groups", []) for i in items):
+        elif "features" in top and any(f[2].split("#")[0] == page for f in top["features"]):
             current = ' aria-current="true"'
-        if "groups" in top:
+        if "features" in top:
             links.append(
                 f'<div class="nav__item"><a class="nav__link" href="{top["href"]}"{current}>'
-                f'{top["label"]} {CHEVRON}</a>'
-                f'<div class="menu"><div class="menu__inner wrap">{groups_html(top["groups"], "menu__link")}</div></div></div>')
+                f'{top["label"]} {CHEVRON}</a>{menu_html(top)}</div>')
         else:
             links.append(f'<a class="nav__link" href="{top["href"]}"{current}>{top["label"]}</a>')
 
     sheet = []
     for top in NAV:
-        if "groups" in top:
-            sheet.append(groups_html(top["groups"], "footer__link"))
-    plain = "".join(f'<a class="footer__link" href="{t["href"]}">{t["label"]}</a>' for t in NAV if "groups" not in t)
+        if "features" in top:
+            sheet.append(group_html(top, "footer__link"))
+    plain = "".join(f'<a class="footer__link" href="{t["href"]}">{t["label"]}</a>' for t in NAV if "features" not in t)
     sheet.append(f'<div><p class="menu__label">More</p>{plain}'
                  f'<a class="footer__link" href="{SIGN_IN}">Sign in</a>'
                  f'<a class="footer__link" href="{SIGN_UP}">Sign up</a></div>')
@@ -126,11 +152,9 @@ def header(page):
 def footer():
     cols = []
     for top in NAV:
-        if "groups" in top:
-            items = [i for _, group in top["groups"] for i in group]
-            links = "".join(menu_link(i, "footer__link") for i in items)
-            cols.append(f'<div><p class="menu__label">{top["label"]}</p>{links}</div>')
-    plain = "".join(f'<a class="footer__link" href="{t["href"]}">{t["label"]}</a>' for t in NAV if "groups" not in t)
+        if "features" in top:
+            cols.append(group_html(top, "footer__link"))
+    plain = "".join(f'<a class="footer__link" href="{t["href"]}">{t["label"]}</a>' for t in NAV if "features" not in t)
     cols.append(f'<div><p class="menu__label">Company</p>{plain}'
                 f'<a class="footer__link" href="{SIGN_UP}">Sign up</a>'
                 f'<a class="footer__link" href="{SIGN_IN}">Sign in</a></div>')
