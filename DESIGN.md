@@ -15,7 +15,7 @@ Clean, flat, quiet. One accent. Lines, not shadows. Few words.
 | One `h1` per page, 60 characters or fewer. | Yes |
 | No paragraph, list item, or definition over 28 words. | Yes |
 | Title 65 characters or fewer. Description 160 or fewer. | Yes |
-| No shadows, gradients, or glows. | No |
+| No shadows, gradients, or glows. The one exception: the stage hero fades its backdrop with a mask. | No |
 | One primary button per view. | No |
 | Sell the benefit. Leave the mechanism to Resources. | No |
 

@@ -5,8 +5,9 @@
 /* ---- base ---- */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
+[id] { scroll-margin-top: var(--space-6); }
 body {
-  margin: 0;
+  margin: 0; overflow-x: clip;
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans);
@@ -145,6 +146,24 @@ h3 { font-size: var(--text-m); font-weight: var(--weight-medium); }
 .hero--center h1, .hero--center .lede { margin-inline: auto; }
 .hero--center .actions { justify-content: center; }
 .hero__aside { display: flex; flex-direction: column; align-items: flex-end; gap: var(--space-2); }
+/* The stage: a tall hero with the product drifting behind the words. */
+.hero--stage {
+  position: relative; min-height: 64vh; align-content: end;
+  padding-bottom: var(--space-8); border-bottom: 1px solid var(--color-border);
+}
+.hero--stage > div:not(.backdrop) { position: relative; }
+.backdrop {
+  position: absolute; top: calc(-1 * var(--nav-height)); bottom: 0; left: 50%; width: 100vw; margin-left: -50vw;
+  overflow: hidden; pointer-events: none; opacity: 0.5;
+  mask-image: linear-gradient(to right, transparent 38%, black 78%), linear-gradient(to bottom, transparent 4%, black 24%, black 45%, transparent 95%);
+  mask-composite: intersect;
+}
+.backdrop__plane {
+  position: absolute; top: -10%; right: -6%; width: 68%;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); align-items: start;
+  transform: perspective(1600px) rotateX(46deg) rotateZ(-16deg); transform-origin: 70% 0;
+}
+.backdrop .entry { display: flex; }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-5); margin-top: var(--space-6); }
 
 /* ---- section ---- */
@@ -324,7 +343,13 @@ h3 { font-size: var(--text-m); font-weight: var(--weight-medium); }
   from { transform: translateY(72px); }
   to { transform: none; }
 }
+@keyframes pan {
+  from { translate: 0 0; }
+  to { translate: -4% -22%; }
+}
 @media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .backdrop__plane { animation: pan 48s ease-in-out infinite alternate; }
   @supports (animation-timeline: view()) {
     .chapter__body { animation: chapter linear both; animation-timeline: view(); }
     .drift { animation: drift linear both; animation-timeline: view(); animation-range: entry 0% cover 45%; }
